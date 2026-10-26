@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<article class="post"><header class="post-hero{% unless page.image %} no-image{% endunless %}"{% if page.image %} style="background-image:linear-gradient(90deg,rgba(5,8,15,.9),rgba(5,8,15,.42)),url('{{ page.image | relative_url }}')"{% endif %}><p>{{ page.categories | join: ' / ' }}</p><h1>{{ page.title }}</h1><div>{{ page.author }} · <time>{{ page.date | date: "%Y.%m.%d" }}</time></div></header><div class="post-layout"><div class="post-content">{{ content }}{% if page.tags.size > 0 %}<nav class="tags">{% for tag in page.tags %}<a href="{{ '/tags/#' | append: tag | slugify | relative_url }}">#{{ tag }}</a>{% endfor %}</nav>{% endif %}</div>{% include sidebar.html %}</div></article>
