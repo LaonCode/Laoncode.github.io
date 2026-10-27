@@ -1,4 +1,4 @@
-title: SpactCode
+title: LaonCode
 description: 어느 한 대학생의 코딩 일지
 url: "https://spactcode.github.io"
 baseurl: ""
@@ -19,7 +19,7 @@ defaults:
       type: posts
     values:
       layout: post
-      author: Spact
+      author: Laon
 exclude:
   - image-map.json
   - Gemfile
