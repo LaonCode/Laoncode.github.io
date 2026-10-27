@@ -35,3 +35,13 @@ html[data-theme="dark"] .bg-dimmed:before{background:rgba(0,0,0,.65)}
 .area-aside .box-category .tt_category .sub_category_list[hidden]{display:none!important}
 @media(max-width:600px){.category-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 16px}.category-card{padding:16px 12px}.category-card strong{font-size:13px}.category-card-desc{font-size:10px}}
 #post-list .box-no-search{display:block;padding:30px 16px;color:var(--text-dim);text-align:center}
+
+/* Mobile drawer enters from the left; its toggle stays above the overlay. */
+@media(max-width:1060px){
+  .wrap-right .header{position:fixed;top:0;left:0;width:100%;height:60px;z-index:50;pointer-events:none}
+  .wrap-right .header .button-menu{position:fixed;top:8px;right:12px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;padding:10px;z-index:51;pointer-events:auto;background:var(--bg-panel);border:1px solid var(--border-dim);border-radius:9px;color:var(--text-main)}
+  .header .button-menu[aria-expanded="true"] svg{display:none}.header .button-menu[aria-expanded="true"]:after{content:'×';font-size:28px;line-height:1}
+  .wrap-right .area-aside{left:0;right:auto;top:0;width:min(320px,calc(100% - 76px));max-width:none;height:100dvh;box-sizing:border-box;border-left:0;border-right:1px solid var(--border-dim);transform:translateX(-100%);transition:transform .22s ease,visibility .22s;overscroll-behavior:contain}
+  .wrap-right .area-aside.area-aside-on{left:0;right:auto;transform:translateX(0);visibility:visible}
+  body.bg-dimmed{overflow:hidden}body.bg-dimmed:before{position:fixed;inset:0;width:auto;height:auto;margin:0;pointer-events:auto}
+}

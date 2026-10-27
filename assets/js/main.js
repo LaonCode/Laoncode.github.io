@@ -8,8 +8,9 @@
   theme(document.documentElement.dataset.theme==='dark');
   $('#theme-button')?.addEventListener('click',()=>theme(document.documentElement.dataset.theme!=='dark'));
   const menu=$('.button-menu'),aside=$('.area-aside');
-  function closeMenu(){aside?.classList.remove('area-aside-on');document.body.classList.remove('bg-dimmed');menu?.setAttribute('aria-expanded','false');}
-  menu?.addEventListener('click',()=>{const open=aside.classList.toggle('area-aside-on');document.body.classList.toggle('bg-dimmed',open);menu.setAttribute('aria-expanded',String(open));});
+  function closeMenu(){aside?.classList.remove('area-aside-on');document.body.classList.remove('bg-dimmed');menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','메뉴 열기');}
+  menu?.addEventListener('click',()=>{const open=aside.classList.toggle('area-aside-on');document.body.classList.toggle('bg-dimmed',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');});
+  matchMedia('(min-width:1061px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
   document.addEventListener('click',e=>{if(aside&&!aside.contains(e.target)&&!menu.contains(e.target))closeMenu();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
   const search=$('#search-dialog');$('#profile-search-btn')?.addEventListener('click',()=>{closeMenu();search.showModal();$('#search-input').focus();});
