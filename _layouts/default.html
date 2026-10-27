@@ -15,7 +15,7 @@
   <header class="header"><div class="inner-header topnavnone"><div class="area-align"><div class="area-gnb"><nav class="topnavnone"><a href="/">홈</a></nav></div><button class="button-menu" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="sidebar"><svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor"><path d="M0 0h20v2H0zm0 6h20v2H0zm0 6h20v2H0z"/></svg></button></div></div></header>
   {% unless page.layout == 'post' %}{% include hero.html %}{% endunless %}
   <div id="container"><main class="main"><div class="area-main">{{ content }}</div>{% include sidebar.html %}</main></div>
-  <footer id="footer"><p>© {{ 'now' | date: '%Y' }} Spact. All rights reserved.</p><a href="/feed.xml">RSS</a> · <a href="https://spactcodes.tistory.com/">티스토리 원본</a></footer>
+  <footer id="footer"><p>© {{ 'now' | date: '%Y' }} Spact. All rights reserved.</p></footer>
 </div>
 <dialog id="search-dialog" class="migration-search"><form method="dialog"><div class="search-modal-top"><label for="search-input" class="blind">블로그 검색</label><input id="search-input" class="search-modal-input" type="search" placeholder="찾아보고자 하는 포스팅을 검색해보세요"><button class="search-modal-cancel" aria-label="검색 닫기">Cancel</button></div></form><div class="search-modal-body"><a class="search-modal-tagtitle" href="/tags/">태그 클라우드 이동 ←</a><div class="search-modal-tags" id="search-tags"></div><div id="search-results" aria-live="polite"></div></div></dialog>
 <dialog id="image-dialog"><form method="dialog"><button aria-label="이미지 닫기">닫기 ×</button></form><img alt=""></dialog>

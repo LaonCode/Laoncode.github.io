@@ -3,7 +3,9 @@
   <div class="hero-pycode" aria-hidden="true"><div class="hero-pycode-viewport"><div class="hero-pycode-lines" id="hero-pycode-lines"></div></div></div>
   <p class="hero-eyebrow">// SYSTEM ONLINE</p><h2 class="hero-title">Hello World!<br><span class="hero-title-sub">Let's <span id="hero-typer" class="hero-typer">Hack</span><span class="hero-cursor">|</span></span></h2>
   <p class="hero-desc">#어느 한 대학생의 코딩 일지 #Hacking #Programming</p>
-  <div class="hero-stats" title="방문자 집계 서비스를 연결하면 실제 수치가 표시됩니다">
-  {% assign labels = 'TOTAL VISITORS,TODAY,YESTERDAY' | split: ',' %}{% for label in labels %}<div class="hero-stat"><div class="hero-stat-num" aria-label="방문자 집계 미연결">—</div><div class="hero-stat-label">{{ label }}</div></div>{% endfor %}
-  </div>
+  <nav class="category-cards" aria-label="주제별 글 보기">
+  {% assign icons = '⌘,⚑,◎,▤,⌕,✦' | split: ',' %}
+  {% assign descriptions = '만들고 배우는 코드,문제를 풀며 쌓는 기록,취약점 탐구와 제보,경험을 나누는 기술 기록,연구와 새로운 관점,도전과 성장의 기록' | split: ',' %}
+  {% for category in site.featured_categories %}<a class="category-card category-card-{{ forloop.index }}" href="/?category={{ category | url_encode }}"><span class="category-card-icon" aria-hidden="true">{{ icons[forloop.index0] }}</span><strong>{{ category }}</strong><span class="category-card-desc">{{ descriptions[forloop.index0] }}</span></a>{% endfor %}
+  </nav>
 </div>
