@@ -1,5 +1,5 @@
 {% assign post = include.post %}
 <article class="article-type-common article-type-thumbnail">
 {% if post.image %}<a href="{{ post.url }}" class="link-article thumbnail-link" aria-label="{{ post.title | escape }}"><p class="thumbnail" has-thumbnail="1" style="background-image:url('{{ post.image }}')"><img class="img-thumbnail" src="{{ post.image }}" alt="" loading="lazy"></p></a>{% endif %}
-<div class="article-content"><a href="{{ post.url }}" class="link-article"><strong class="title">{{ post.title | escape }}</strong><p class="summary">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p></a><div class="box-meta"><a class="link-category" href="/?category={{ post.categories.first | url_encode }}">{{ post.categories | join: ' / ' | escape }}</a><span class="date">{{ post.date | date: '%Y.%m.%d' }}</span></div></div>
+<div class="article-content"><a href="{{ post.url }}" class="link-article"><strong class="title">{{ post.title | escape }}</strong><p class="summary">{{ post.content | strip_html | normalize_whitespace | truncate: 180 | escape }}</p></a><div class="box-meta"><a class="link-category" href="/?category={{ post.categories.first | url_encode }}">{{ post.categories | join: ' / ' | escape }}</a><span class="date">{{ post.date | date: '%Y.%m.%d' }}</span></div></div>
 </article>
