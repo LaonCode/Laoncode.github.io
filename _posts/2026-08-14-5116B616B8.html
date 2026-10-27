@@ -8,11 +8,7 @@ legacy_url: "https://spactcodes.tistory.com/entry/EP10-%ED%98%91%EC%97%85%EA%B3%
 image: "/assets/images/posts/cover-061c07b959f5789cbed2c15d.png"
 ---
 
-<!-- System - START -->
-
-<!-- System - END -->
-
-            <div class="contents_style"><h3 style="color: #000000; text-align: start;" data-ke-size="size23"><b>#원격 브랜치 정보 가져오기</b></h3>
+<div class="contents_style"><h3 style="color: #000000; text-align: start;" data-ke-size="size23"><b>#원격 브랜치 정보 가져오기</b></h3>
 <p data-ke-size="size16">지금까지 git pull 명령은 원격 저장소의 최신 커밋을 지역 저장소에 합쳐 준다는 것을 알아보았다. 하지만 원격 저장소의 최신 커밋을 무조건 합치지 않고 원격 브랜치에서 어떤 변화가 있었는지 그 정보만 가져온 후 필요한 커밋만 합칠 수도 있다. 이제부터 이 방법에 대해 공부해 보자.</p>
 <h4 style="color: #000000; text-align: start;" data-ke-size="size20"><b>커밋과 브랜치 이해하기</b></h4>
 <p data-ke-size="size16">지역 저장소의 main 브랜치처럼 원격 저장소를 만들 때도 main 브랜치가 기본으로 만들어진다. 앞에서 git_home 저장소와 git_laptop 저장소로 원격 저장소를 복제한 상태로 실습해 보겠다.</p>
@@ -69,95 +65,3 @@ image: "/assets/images/posts/cover-061c07b959f5789cbed2c15d.png"
 <p data-ke-size="size16">이렇게 10일 차 Do it! 여름방학 모각공을 마무리하며 2주 차 절반이라는 시간이 끝이 났다.</p>
 <p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="388" data-origin-height="514"><span data-url="/assets/images/posts/2e28b25343f6c6fa963280e315c6b2eb2e291f7e.png" data-phocus="/assets/images/posts/2e28b25343f6c6fa963280e315c6b2eb2e291f7e.png"><img src="/assets/images/posts/2e28b25343f6c6fa963280e315c6b2eb2e291f7e.png" loading="lazy" width="388" height="514" data-origin-width="388" data-origin-height="514"/></span></figure>
 </p></div>
-                    <!-- System - START -->
-        <div class="revenue_unit_wrap">
-  <div class="revenue_unit_item adfit">
-    <div class="revenue_unit_info">728x90</div>
-    <ins class="kakao_ad_area" style="display: none;" data-ad-unit="DAN-m1yq0aTCsUcbylxz" data-ad-width="728px" data-ad-height="90px"></ins>
-    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async="async"></script>
-  </div>
-</div>
-<div class="revenue_unit_wrap">
-  <div class="revenue_unit_item tenping">
-    <div class="revenue_unit_info">LIST</div>
-    <tenping class="adsbytenping" style="width: 100%; max-width: 768px; margin: 0 auto; display: block;" mediaid="5823003" tenping-ad-display-type="67%2be3LHzHbblsB9oLrOpWQ%3d%3d"></tenping>
-    <script src="//tads.tenping.kr/scripts/adsbytenping.min.js" async="async"></script>
-  </div>
-</div>
-        <!-- System - END -->
-
-
-<!-- inventory -->
-
-
-
-
-
-
-                    <div class="container_postbtn #post_button_group">
-  <div class="postbtn_like"><script>window.ReactionButtonType = 'reaction';
-window.ReactionApiUrl = '//spactcodes.tistory.com/reaction';
-window.ReactionReqBody = {
-    entryId: 91
-}</script>
-<div class="wrap_btn" id="reaction-91" data-tistory-react-app="Reaction"></div><div class="wrap_btn wrap_btn_share"><button type="button" class="btn_post sns_btn btn_share" aria-expanded="false" data-entry-id="91" data-thumbnail-url="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F8j9Qm%2FdJMcabFecdm%2FAAAAAAAAAAAAAAAAAAAAANJN7Y2Xu6AoQKC0-ir1R7xNqjnyr4WxCvi82ScSyGRM%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DcH33Y%252FlihRon3JblEcZg5e7bzsU%253D" data-title="EP.10 협업과 원격 브랜치 정보 가져오기[2주차]" data-description="#원격 브랜치 정보 가져오기지금까지 git pull 명령은 원격 저장소의 최신 커밋을 지역 저장소에 합쳐 준다는 것을 알아보았다. 하지만 원격 저장소의 최신 커밋을 무조건 합치지 않고 원격 브랜치에서 어떤 변화가 있었는지 그 정보만 가져온 후 필요한 커밋만 합칠 수도 있다. 이제부터 이 방법에 대해 공부해 보자.커밋과 브랜치 이해하기지역 저장소의 main 브랜치처럼 원격 저장소를 만들 때도 main 브랜치가 기본으로 만들어진다. 앞에서 git_home 저장소와 git_laptop 저장소로 원격 저장소를 복제한 상태로 실습해 보겠다.git loggit_home 디렉터리가 열려 있는 상태에서 git log 명령으로 커밋 상태를 확인해 보자. 최종 커밋인 'add day' 앞에 (HEAD -&gt; main, o.." data-profile-image="https://tistory1.daumcdn.net/tistory/5823003/attach/5e39a64fbf22440f8e0f48865435ed0e" data-profile-name="Spact" data-pc-url="https://spactcodes.tistory.com/entry/EP10-%ED%98%91%EC%97%85%EA%B3%BC-%EC%9B%90%EA%B2%A9-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%A0%95%EB%B3%B4-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0" data-relative-pc-url="/entry/EP10-%ED%98%91%EC%97%85%EA%B3%BC-%EC%9B%90%EA%B2%A9-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%A0%95%EB%B3%B4-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0" data-blog-title="SpactCode"><span class="ico_postbtn ico_share">공유하기</span></button>
-  <div class="layer_post" id="tistorySnsLayer"></div>
-</div><div class="wrap_btn wrap_btn_etc" data-entry-id="91" data-entry-visibility="public" data-category-visibility="public"><button type="button" class="btn_post btn_etc2" aria-expanded="false"><span class="ico_postbtn ico_etc">게시글 관리</span></button>
-  <div class="layer_post" id="tistoryEtcLayer"></div>
-</div></div>
-<button type="button" class="btn_menu_toolbar btn_subscription #subscribe" data-blog-id="5823003" data-url="https://spactcodes.tistory.com/entry/EP10-%ED%98%91%EC%97%85%EA%B3%BC-%EC%9B%90%EA%B2%A9-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%A0%95%EB%B3%B4-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0" data-device="web_pc" data-tiara-action-name="구독 버튼_클릭"><em class="txt_state"></em><strong class="txt_tool_id">SpactCode</strong><span class="img_common_tistory ico_check_type1"></span></button><div class="postbtn_ccl" data-ccl-type="1" data-ccl-derive="2">
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" target="_blank" class="link_ccl" rel="license">
-        <span class="bundle_ccl">
-            <span class="ico_postbtn ico_ccl1">저작자표시</span> <span class="ico_postbtn ico_ccl2">비영리</span> <span class="ico_postbtn ico_ccl3">변경금지</span> 
-        </span>
-        <span class="screen_out">(새창열림)</span>
-    </a>
-</div>
-<!--
-<rdf:RDF xmlns="https://web.resource.org/cc/" xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <Work rdf:about="">
-        <license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" />
-    </Work>
-    <License rdf:about="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko">
-        <permits rdf:resource="https://web.resource.org/cc/Reproduction"/>
-        <permits rdf:resource="https://web.resource.org/cc/Distribution"/>
-        <requires rdf:resource="https://web.resource.org/cc/Notice"/>
-        <requires rdf:resource="https://web.resource.org/cc/Attribution"/>
-        <prohibits rdf:resource="https://web.resource.org/cc/CommercialUse"/>
-
-    </License>
-</rdf:RDF>
--->  <div data-tistory-react-app="SupportButton"></div>
-</div>
-
-                    <!-- PostListinCategory - START -->
-<div class="another_category another_category_color_gray">
-  <h4>'<a href="/category/Let%27s%20Coding">Let's Coding</a> &gt; <a href="/category/Let%27s%20Coding/Do%20it%21%20%EC%97%AC%EB%A6%84%EB%B0%A9%ED%95%99%20%EB%AA%A8%EA%B0%81%EA%B3%B5">Do it! 여름방학 모각공</a>' 카테고리의 다른 글</h4>
-  <table>
-    <tr>
-      <th><a href="/entry/EP12-%EC%9B%90%EA%B2%A9-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90%EC%84%9C-%ED%98%91%EC%97%85%ED%95%98%EA%B8%B023%EC%A3%BC%EC%B0%A8">EP.12 원격 저장소에서 협업하기2[3주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.08.18</td>
-    </tr>
-    <tr>
-      <th><a href="/entry/EP11-%EC%9B%90%EA%B2%A9-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90%EC%84%9C-%ED%98%91%EC%97%85%ED%95%98%EA%B8%B03%EC%A3%BC%EC%B0%A8">EP.11 원격 저장소에서 협업하기1[3주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.08.17</td>
-    </tr>
-    <tr>
-      <th><a href="/entry/EP9-%EA%B9%83%ED%97%88%EB%B8%8C%EB%A1%9C-%ED%98%91%EC%97%85%ED%95%98%EA%B8%B0">EP.9 깃허브로 협업하기[2주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.08.13</td>
-    </tr>
-    <tr>
-      <th><a href="/entry/EP8-SSH-%EC%9B%90%EA%B2%A9-%EC%A0%91%EC%86%8D">EP.8 SSH 원격 접속[2주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.08.12</td>
-    </tr>
-    <tr>
-      <th><a href="/entry/EP7-%EC%A7%80%EC%97%AD-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%99%80-%EC%9B%90%EA%B2%A9%EC%A0%80%EC%9E%A5%EC%86%8C2%EC%A3%BC%EC%B0%A8">EP.7 지역 저장소와 원격저장소[2주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.08.11</td>
-    </tr>
-  </table>
-</div>
-
-<!-- PostListinCategory - END -->
-
-
-

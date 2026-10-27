@@ -8,11 +8,7 @@ legacy_url: "https://spactcodes.tistory.com/entry/EP20-Python-%EB%82%A0%EC%95%84
 image: "/assets/images/posts/cover-b51952f6dcec561c8412ed03.png"
 ---
 
-<!-- System - START -->
-
-<!-- System - END -->
-
-            <div class="contents_style"><h4 style="color: #000000; text-align: start;" data-ke-size="size20">#이터레이터와 제너레이터</h4>
+<div class="contents_style"><h4 style="color: #000000; text-align: start;" data-ke-size="size20">#이터레이터와 제너레이터</h4>
 <p data-ke-size="size16">아래는 늘 사용하던 리스트의 사용법이다.</p>
 <blockquote data-ke-style="style3">for a in [1, 2, 3]:<br />&nbsp; &nbsp; &nbsp;print(a)</blockquote>
 <p data-ke-size="size16">리스트 [1, 2, 3]을 for 문으로 차례대로 하나씩 출력하는 코드이다. 이렇게 for 문과 같은 반복 구문에 적용할 수 있는 리스트와 같은 객체를 '반복 가능(iterable) 객체'라고 한다.</p>
@@ -26,92 +22,3 @@ image: "/assets/images/posts/cover-b51952f6dcec561c8412ed03.png"
 <p data-ke-size="size16">이제 리스트를 이터레이터로 변경했으므로 next 함수를 호출해 보자.</p>
 <blockquote data-ke-style="style3">&gt;&gt;&gt; a = [1, 2 ,3]<br />&gt;&gt;&gt; ia = iter(a)<br />&gt;&gt;&gt; print(next(ia))<br />1<br />&gt;&gt;&gt; print(next(ia))<br />2<br />&gt;&gt;&gt; print(next(ia))<br />3<br />&gt;&gt;&gt; print(next(ia))<br />Traceback (most recent call last):<br />&nbsp; &nbsp; File "&lt;python-input-7&gt;", line 1, in &lt;module&gt; <br />&nbsp; &nbsp; &nbsp; print(next(ia)) <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~~~^^^^ <br />StopIteration</blockquote>
 <p data-ke-size="size16">next 함수를 호출할 때마다 이터레이터 객체의 요소를 차례대로 리턴하는 것을 확인할 수 있다. 하지만 더는 리턴할 값이 없다면 Stoplteration 예외가 발생한다.</p></div>
-                    <!-- System - START -->
-        <div class="revenue_unit_wrap">
-  <div class="revenue_unit_item adfit">
-    <div class="revenue_unit_info">728x90</div>
-    <ins class="kakao_ad_area" style="display: none;" data-ad-unit="DAN-m1yq0aTCsUcbylxz" data-ad-width="728px" data-ad-height="90px"></ins>
-    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async="async"></script>
-  </div>
-</div>
-<div class="revenue_unit_wrap">
-  <div class="revenue_unit_item tenping">
-    <div class="revenue_unit_info">LIST</div>
-    <tenping class="adsbytenping" style="width: 100%; max-width: 768px; margin: 0 auto; display: block;" mediaid="5823003" tenping-ad-display-type="67%2be3LHzHbblsB9oLrOpWQ%3d%3d"></tenping>
-    <script src="//tads.tenping.kr/scripts/adsbytenping.min.js" async="async"></script>
-  </div>
-</div>
-        <!-- System - END -->
-
-
-<!-- inventory -->
-
-
-
-
-
-
-                    <div class="container_postbtn #post_button_group">
-  <div class="postbtn_like"><script>window.ReactionButtonType = 'reaction';
-window.ReactionApiUrl = '//spactcodes.tistory.com/reaction';
-window.ReactionReqBody = {
-    entryId: 43
-}</script>
-<div class="wrap_btn" id="reaction-43" data-tistory-react-app="Reaction"></div><div class="wrap_btn wrap_btn_share"><button type="button" class="btn_post sns_btn btn_share" aria-expanded="false" data-entry-id="43" data-thumbnail-url="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbwZusx%2FdJMcaaKXnnN%2FAAAAAAAAAAAAAAAAAAAAAEIB4tomGfXvXKbPBXXa_P0yocPokHbDfCSdUAJqCawa%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DHlfe%252FWJLhohKrp6BovPPbSqLm5U%253D" data-title="EP.20 Python 날아오르기(2) [5주차]" data-description="#이터레이터와 제너레이터아래는 늘 사용하던 리스트의 사용법이다.for a in [1, 2, 3]: print(a)리스트 [1, 2, 3]을 for 문으로 차례대로 하나씩 출력하는 코드이다. 이렇게 for 문과 같은 반복 구문에 적용할 수 있는 리스트와 같은 객체를 '반복 가능(iterable) 객체'라고 한다.이터레이터 톺아보기그렇다면 이터레이터(iterable)란 무엇일까?이터레이터는 next 함수 호출 시 계속 그다음 값을 리턴하는 객체이다. 리스트는 반복 가능(iterable)하다는 것을 이미 알고 있다. 그렇다면 리스트는 이터레이터일지 확인해보자.&gt;&gt;&gt; a = [1, 2, 3]&gt;&gt;&gt; next(a)Traceback (most recent call last): File &quot;&quot;, lin.." data-profile-image="https://tistory1.daumcdn.net/tistory/5823003/attach/5e39a64fbf22440f8e0f48865435ed0e" data-profile-name="Spact" data-pc-url="https://spactcodes.tistory.com/entry/EP20-Python-%EB%82%A0%EC%95%84%EC%98%A4%EB%A5%B4%EA%B8%B02-5%EC%A3%BC%EC%B0%A8" data-relative-pc-url="/entry/EP20-Python-%EB%82%A0%EC%95%84%EC%98%A4%EB%A5%B4%EA%B8%B02-5%EC%A3%BC%EC%B0%A8" data-blog-title="SpactCode"><span class="ico_postbtn ico_share">공유하기</span></button>
-  <div class="layer_post" id="tistorySnsLayer"></div>
-</div><div class="wrap_btn wrap_btn_etc" data-entry-id="43" data-entry-visibility="public" data-category-visibility="public"><button type="button" class="btn_post btn_etc2" aria-expanded="false"><span class="ico_postbtn ico_etc">게시글 관리</span></button>
-  <div class="layer_post" id="tistoryEtcLayer"></div>
-</div></div>
-<button type="button" class="btn_menu_toolbar btn_subscription #subscribe" data-blog-id="5823003" data-url="https://spactcodes.tistory.com/entry/EP20-Python-%EB%82%A0%EC%95%84%EC%98%A4%EB%A5%B4%EA%B8%B02-5%EC%A3%BC%EC%B0%A8" data-device="web_pc" data-tiara-action-name="구독 버튼_클릭"><em class="txt_state"></em><strong class="txt_tool_id">SpactCode</strong><span class="img_common_tistory ico_check_type1"></span></button><div class="postbtn_ccl" data-ccl-type="1" data-ccl-derive="2">
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" target="_blank" class="link_ccl" rel="license">
-        <span class="bundle_ccl">
-            <span class="ico_postbtn ico_ccl1">저작자표시</span> <span class="ico_postbtn ico_ccl2">비영리</span> <span class="ico_postbtn ico_ccl3">변경금지</span> 
-        </span>
-        <span class="screen_out">(새창열림)</span>
-    </a>
-</div>
-<!--
-<rdf:RDF xmlns="https://web.resource.org/cc/" xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <Work rdf:about="">
-        <license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" />
-    </Work>
-    <License rdf:about="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko">
-        <permits rdf:resource="https://web.resource.org/cc/Reproduction"/>
-        <permits rdf:resource="https://web.resource.org/cc/Distribution"/>
-        <requires rdf:resource="https://web.resource.org/cc/Notice"/>
-        <requires rdf:resource="https://web.resource.org/cc/Attribution"/>
-        <prohibits rdf:resource="https://web.resource.org/cc/CommercialUse"/>
-
-    </License>
-</rdf:RDF>
--->  <div data-tistory-react-app="SupportButton"></div>
-</div>
-
-                    <!-- PostListinCategory - START -->
-<div class="another_category another_category_color_gray">
-  <h4>'<a href="/category/Let%27s%20Coding">Let's Coding</a> &gt; <a href="/category/Let%27s%20Coding/Do%20it%21%20%EA%B8%B0%EC%B4%88%20%EC%96%B8%EC%96%B4%20%EC%8A%A4%ED%84%B0%EB%94%94">Do it! 기초 언어 스터디</a>' 카테고리의 다른 글</h4>
-  <table>
-    <tr>
-      <th><a href="/entry/XFile-10">EP.22 Python 정규 표현식(2) [6주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.02.11</td>
-    </tr>
-    <tr>
-      <th><a href="/entry/XFile-9">EP.21 Python 정규 표현식(1) [6주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.02.09</td>
-    </tr>
-    <tr>
-      <th><a href="/entry/XFile-8">EP.19 Python 날아오르기(1) [5주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.02.08</td>
-    </tr>
-    <tr>
-      <th><a href="/entry/XFile-7">EP.18 Python 프로그래밍, 어떻게 시작해야 할까?(2) [5주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.02.07</td>
-    </tr>
-    <tr>
-      <th><a href="/entry/XFile-6">EP.17 Python 프로그래밍, 어떻게 시작해야 할까?(1) [5주차]</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2026.02.07</td>
-    </tr>
-  </table>
-</div>
-
-<!-- PostListinCategory - END -->

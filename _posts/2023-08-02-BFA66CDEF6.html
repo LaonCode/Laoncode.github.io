@@ -8,11 +8,7 @@ legacy_url: "https://spactcodes.tistory.com/entry/EP2-%EA%B0%80%EC%83%81-%EC%9B%
 image: "/assets/images/posts/cover-a88dcfad190f3fe3ea83abb3.png"
 ---
 
-<!-- System - START -->
-
-<!-- System - END -->
-
-            <div class="contents_style"><p data-ke-size="size16">지난 시간 DoS가 무엇인지 정리한 것을 이어 추후 실습을 위해 이번에는 가상머신을 활용해서 가상 웹 서버를 구축하기 위한 초기 세팅을 진행하려고 한다.</p><hr data-ke-type="horizontalRule" data-ke-style="style7"><p data-ke-size="size16">먼저 준비물은 VM VirtualBox 또는 VMware이 필요하다. 본 글에서는 VM VirtualBox으로 진행하겠다. (설치 생략)</p><blockquote data-ke-style="style2"><b>우분투(<span style="color: #202122;">Ubuntu</span>) 설치&nbsp;</b></blockquote><p data-ke-size="size16">먼저 첨부한 우분투 사이트 링크를 통해 우분투 파일을 설치해준다. <b><a href="https://ubuntu.com/#download" target="_blank"><span>https://ubuntu.com/#download</span></a></b></p><figure data-ke-type="opengraph" data-og-title="Enterprise Open Source and Linux | Ubuntu" data-ke-align="alignCenter" data-og-description="Ubuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT." data-og-host="ubuntu.com" data-og-source-url="https://ubuntu.com/#download" data-og-image="https://blog.kakaocdn.net/dna/Ro5Wv/hyTwokQcxz/AAAAAAAAAAAAAAAAAAAAAElcayMS5iJb6lRPlPwtUCU5rnfJqnHlb0oQ9Y10pgBX/img.jpg?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires=1767193199&amp;allow_ip=&amp;allow_referer=&amp;signature=D3PUyFoQ1W7GUi8pPNrGWbAqdgk%3D" data-og-url="https://ubuntu.com/"><a href="https://ubuntu.com/" target="_blank" data-source-url="https://ubuntu.com/#download"><div class="og-image" style="background-image: url('https://blog.kakaocdn.net/dna/Ro5Wv/hyTwokQcxz/AAAAAAAAAAAAAAAAAAAAAElcayMS5iJb6lRPlPwtUCU5rnfJqnHlb0oQ9Y10pgBX/img.jpg?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires=1767193199&amp;allow_ip=&amp;allow_referer=&amp;signature=D3PUyFoQ1W7GUi8pPNrGWbAqdgk%3D')"> </div><div class="og-text"><p class="og-title">Enterprise Open Source and Linux | Ubuntu</p><p class="og-desc">Ubuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT.</p><p class="og-host">ubuntu.com</p></div></a></figure><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="1422" data-origin-height="872"><span data-url="/assets/images/posts/809a70912cbee9bf0e568831a2d3ab9f826097b4.png" data-phocus="/assets/images/posts/809a70912cbee9bf0e568831a2d3ab9f826097b4.png"><img src="/assets/images/posts/809a70912cbee9bf0e568831a2d3ab9f826097b4.png" loading="lazy" width="1422" height="872" data-origin-width="1422" data-origin-height="872"/></span></figure>
+<div class="contents_style"><p data-ke-size="size16">지난 시간 DoS가 무엇인지 정리한 것을 이어 추후 실습을 위해 이번에는 가상머신을 활용해서 가상 웹 서버를 구축하기 위한 초기 세팅을 진행하려고 한다.</p><hr data-ke-type="horizontalRule" data-ke-style="style7"><p data-ke-size="size16">먼저 준비물은 VM VirtualBox 또는 VMware이 필요하다. 본 글에서는 VM VirtualBox으로 진행하겠다. (설치 생략)</p><blockquote data-ke-style="style2"><b>우분투(<span style="color: #202122;">Ubuntu</span>) 설치&nbsp;</b></blockquote><p data-ke-size="size16">먼저 첨부한 우분투 사이트 링크를 통해 우분투 파일을 설치해준다. <b><a href="https://ubuntu.com/#download" target="_blank"><span>https://ubuntu.com/#download</span></a></b></p><figure data-ke-type="opengraph" data-og-title="Enterprise Open Source and Linux | Ubuntu" data-ke-align="alignCenter" data-og-description="Ubuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT." data-og-host="ubuntu.com" data-og-source-url="https://ubuntu.com/#download" data-og-image="https://blog.kakaocdn.net/dna/Ro5Wv/hyTwokQcxz/AAAAAAAAAAAAAAAAAAAAAElcayMS5iJb6lRPlPwtUCU5rnfJqnHlb0oQ9Y10pgBX/img.jpg?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires=1767193199&amp;allow_ip=&amp;allow_referer=&amp;signature=D3PUyFoQ1W7GUi8pPNrGWbAqdgk%3D" data-og-url="https://ubuntu.com/"><a href="https://ubuntu.com/" target="_blank" data-source-url="https://ubuntu.com/#download"><div class="og-image" style="background-image: url('https://blog.kakaocdn.net/dna/Ro5Wv/hyTwokQcxz/AAAAAAAAAAAAAAAAAAAAAElcayMS5iJb6lRPlPwtUCU5rnfJqnHlb0oQ9Y10pgBX/img.jpg?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires=1767193199&amp;allow_ip=&amp;allow_referer=&amp;signature=D3PUyFoQ1W7GUi8pPNrGWbAqdgk%3D')"> </div><div class="og-text"><p class="og-title">Enterprise Open Source and Linux | Ubuntu</p><p class="og-desc">Ubuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT.</p><p class="og-host">ubuntu.com</p></div></a></figure><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="1422" data-origin-height="872"><span data-url="/assets/images/posts/809a70912cbee9bf0e568831a2d3ab9f826097b4.png" data-phocus="/assets/images/posts/809a70912cbee9bf0e568831a2d3ab9f826097b4.png"><img src="/assets/images/posts/809a70912cbee9bf0e568831a2d3ab9f826097b4.png" loading="lazy" width="1422" height="872" data-origin-width="1422" data-origin-height="872"/></span></figure>
 <p data-ke-size="size16">먼저 빨간 밑줄이 있는곳을 클릭해서 들어간다.</p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="1512" data-origin-height="831"><span data-url="/assets/images/posts/f9ddef3339e9979f68c69f4b655893ce90dde2c9.png" data-phocus="/assets/images/posts/f9ddef3339e9979f68c69f4b655893ce90dde2c9.png"><img src="/assets/images/posts/f9ddef3339e9979f68c69f4b655893ce90dde2c9.png" loading="lazy" width="1512" height="831" data-origin-width="1512" data-origin-height="831"/></span></figure>
 <p data-ke-size="size16">들어가서 조금만 내려가면 빨간 밑줄로 표시한 부분이 보이게 된다. 이 글을 작성할 당시 가장 최신 버전이었던 22.04.2를 설치하였다.</p><figure class="imageblock alignLeft" data-ke-mobileStyle="widthOrigin" data-origin-width="132" data-origin-height="161"><span data-url="/assets/images/posts/cd107c57018e5279ae21ae034153d9501a72c525.png" data-phocus="/assets/images/posts/cd107c57018e5279ae21ae034153d9501a72c525.png"><img src="/assets/images/posts/cd107c57018e5279ae21ae034153d9501a72c525.png" loading="lazy" width="132" height="161" data-origin-width="132" data-origin-height="161"/></span></figure>
 <p data-ke-size="size16">다운로드를 하면 iso파일이 다운로드가 된다. 다음으로 다운로드된 파일은 잠시 두고 VM VirtualBox 또는 VMware를 실행해 준다. (이 글에서는<span style="color: #333333;">&nbsp;VM VirtualBox로 실습을 해보도록 하겠다.</span>)실행해서 새로 만들기를 눌러준다.</p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="1223" data-origin-height="736"><span data-url="/assets/images/posts/8741a9b5783d7db3b9b05589f2ba86c790f29444.png" data-phocus="/assets/images/posts/8741a9b5783d7db3b9b05589f2ba86c790f29444.png"><img src="/assets/images/posts/8741a9b5783d7db3b9b05589f2ba86c790f29444.png" loading="lazy" width="1223" height="736" data-origin-width="1223" data-origin-height="736"/></span></figure>
@@ -30,79 +26,3 @@ image: "/assets/images/posts/cover-a88dcfad190f3fe3ea83abb3.png"
 <p data-ke-size="size16">다음으로 서울을 선택한다.</p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="821" data-origin-height="691"><span data-url="/assets/images/posts/90ff27d8f85146ce1b35e9c3ba01cfa402c07775.png" data-phocus="/assets/images/posts/90ff27d8f85146ce1b35e9c3ba01cfa402c07775.png"><img src="/assets/images/posts/90ff27d8f85146ce1b35e9c3ba01cfa402c07775.png" loading="lazy" width="821" height="691" data-origin-width="821" data-origin-height="691"/></span></figure>
 <p data-ke-size="size16">나머지 빈칸을 채워 넣은 뒤 계속하기를 눌러주면 설치가 진행되고 설치가 끝나게 되면 모든 설치가 끝나게 된다.</p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="820" data-origin-height="692"><span data-url="/assets/images/posts/97daa157145b434e18dfd78f82a95b2f3be92b77.png" data-phocus="/assets/images/posts/97daa157145b434e18dfd78f82a95b2f3be92b77.png"><img src="/assets/images/posts/97daa157145b434e18dfd78f82a95b2f3be92b77.png" loading="lazy" width="820" height="692" data-origin-width="820" data-origin-height="692"/></span></figure>
 <p data-ke-size="size16">이제 다음 글에서는 실제로 가상 웹 서버를 구축하고 DoS공격을 실습해 보겠다.<br><span style="color: #666666;">*본 글은 프로그래밍 공부를 하며 작성한 글이며, 글에 오류가 있다면 꼭 댓글로 알려주시면 감사하겠습니다.</span></p></div>
-                    <!-- System - START -->
-        <div class="revenue_unit_wrap">
-  <div class="revenue_unit_item adfit">
-    <div class="revenue_unit_info">728x90</div>
-    <ins class="kakao_ad_area" style="display: none;" data-ad-unit="DAN-m1yq0aTCsUcbylxz" data-ad-width="728px" data-ad-height="90px"></ins>
-    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async="async"></script>
-  </div>
-</div>
-<div class="revenue_unit_wrap">
-  <div class="revenue_unit_item tenping">
-    <div class="revenue_unit_info">LIST</div>
-    <tenping class="adsbytenping" style="width: 100%; max-width: 768px; margin: 0 auto; display: block;" mediaid="5823003" tenping-ad-display-type="67%2be3LHzHbblsB9oLrOpWQ%3d%3d"></tenping>
-    <script src="//tads.tenping.kr/scripts/adsbytenping.min.js" async="async"></script>
-  </div>
-</div>
-        <!-- System - END -->
-
-
-<!-- inventory -->
-
-
-
-
-
-
-                    <div class="container_postbtn #post_button_group">
-  <div class="postbtn_like"><script>window.ReactionButtonType = 'reaction';
-window.ReactionApiUrl = '//spactcodes.tistory.com/reaction';
-window.ReactionReqBody = {
-    entryId: 21
-}</script>
-<div class="wrap_btn" id="reaction-21" data-tistory-react-app="Reaction"></div><div class="wrap_btn wrap_btn_share"><button type="button" class="btn_post sns_btn btn_share" aria-expanded="false" data-entry-id="21" data-thumbnail-url="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbIiaqp%2FdJMcai9z4Tf%2FAAAAAAAAAAAAAAAAAAAAADsA876G6a5QI9rhkUPiC7CuU4RwX5PwDdr4UHNUDyyK%2Ftfile.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3D77Nc1uoN560UiE7p6%252F6fJGVtXAI%253D" data-title="EP.2 가상 웹서버 제작 [Part.1]" data-description="지난 시간 DoS가 무엇인지 정리한 것을 이어 추후 실습을 위해 이번에는 가상머신을 활용해서 가상 웹 서버를 구축하기 위한 초기 세팅을 진행하려고 한다.먼저 준비물은 VM VirtualBox 또는 VMware이 필요하다. 본 글에서는 VM VirtualBox으로 진행하겠다. (설치 생략)우분투(Ubuntu) 설치 먼저 첨부한 우분투 사이트 링크를 통해 우분투 파일을 설치해준다. https://ubuntu.com/#download Enterprise Open Source and Linux | UbuntuUbuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT.ubun.." data-profile-image="https://tistory1.daumcdn.net/tistory/5823003/attach/5e39a64fbf22440f8e0f48865435ed0e" data-profile-name="Spact" data-pc-url="https://spactcodes.tistory.com/entry/EP2-%EA%B0%80%EC%83%81-%EC%9B%B9%EC%84%9C%EB%B2%84-%EC%A0%9C%EC%9E%91-1" data-relative-pc-url="/entry/EP2-%EA%B0%80%EC%83%81-%EC%9B%B9%EC%84%9C%EB%B2%84-%EC%A0%9C%EC%9E%91-1" data-blog-title="SpactCode"><span class="ico_postbtn ico_share">공유하기</span></button>
-  <div class="layer_post" id="tistorySnsLayer"></div>
-</div><div class="wrap_btn wrap_btn_etc" data-entry-id="21" data-entry-visibility="public" data-category-visibility="public"><button type="button" class="btn_post btn_etc2" aria-expanded="false"><span class="ico_postbtn ico_etc">게시글 관리</span></button>
-  <div class="layer_post" id="tistoryEtcLayer"></div>
-</div></div>
-<button type="button" class="btn_menu_toolbar btn_subscription #subscribe" data-blog-id="5823003" data-url="https://spactcodes.tistory.com/entry/EP2-%EA%B0%80%EC%83%81-%EC%9B%B9%EC%84%9C%EB%B2%84-%EC%A0%9C%EC%9E%91-1" data-device="web_pc" data-tiara-action-name="구독 버튼_클릭"><em class="txt_state"></em><strong class="txt_tool_id">SpactCode</strong><span class="img_common_tistory ico_check_type1"></span></button><div class="postbtn_ccl" data-ccl-type="1" data-ccl-derive="2">
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" target="_blank" class="link_ccl" rel="license">
-        <span class="bundle_ccl">
-            <span class="ico_postbtn ico_ccl1">저작자표시</span> <span class="ico_postbtn ico_ccl2">비영리</span> <span class="ico_postbtn ico_ccl3">변경금지</span> 
-        </span>
-        <span class="screen_out">(새창열림)</span>
-    </a>
-</div>
-<!--
-<rdf:RDF xmlns="https://web.resource.org/cc/" xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <Work rdf:about="">
-        <license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" />
-    </Work>
-    <License rdf:about="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko">
-        <permits rdf:resource="https://web.resource.org/cc/Reproduction"/>
-        <permits rdf:resource="https://web.resource.org/cc/Distribution"/>
-        <requires rdf:resource="https://web.resource.org/cc/Notice"/>
-        <requires rdf:resource="https://web.resource.org/cc/Attribution"/>
-        <prohibits rdf:resource="https://web.resource.org/cc/CommercialUse"/>
-
-    </License>
-</rdf:RDF>
--->  <div data-tistory-react-app="SupportButton"></div>
-</div>
-
-                    <!-- PostListinCategory - START -->
-<div class="another_category another_category_color_gray">
-  <h4>'<a href="/category/Let%27s%20Hack">Let's Hack</a> &gt; <a href="/category/Let%27s%20Hack/DOS">DOS</a>' 카테고리의 다른 글</h4>
-  <table>
-    <tr>
-      <th><a href="/entry/EP1-DOS-%EA%B3%B5%EA%B2%A9">EP.1 서비스 거부 공격 &quot;DOS&quot;</a>&nbsp;&nbsp;<span>(0)</span></th>
-      <td>2023.07.31</td>
-    </tr>
-  </table>
-</div>
-
-<!-- PostListinCategory - END -->
-
-
-
