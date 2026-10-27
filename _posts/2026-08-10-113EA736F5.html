@@ -1,0 +1,134 @@
+---
+title: "Level 33. Bandit33 로그인"
+date: 2026-08-10 21:49:14 +09:00
+categories: ["Let's Hack/Bandit"]
+tags: []
+permalink: "/entry/Level-33-Bandit33-로그인/"
+legacy_url: "https://spactcodes.tistory.com/entry/Level-33-Bandit33-%EB%A1%9C%EA%B7%B8%EC%9D%B8"
+image: "/assets/images/posts/cover-a8841cf1173521c2af9fc795.png"
+---
+
+
+<!-- inventory -->
+
+
+
+
+
+
+            <!-- System - START -->
+
+<!-- System - END -->
+
+            <div class="contents_style"><p data-ke-size="size16"><span style="color: #666666; text-align: start;">오늘은 Bandit33 문제를 해결해보</span><span style="color: #666666; text-align: start;">려고 한다.</span></p>
+<p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="1134" data-origin-height="266"><span data-url="/assets/images/posts/8091d7a8cdfb5b3b617d7394432dab3ccda16bb9.png" data-phocus="/assets/images/posts/8091d7a8cdfb5b3b617d7394432dab3ccda16bb9.png"><img src="/assets/images/posts/8091d7a8cdfb5b3b617d7394432dab3ccda16bb9.png" loading="lazy" width="1134" height="266" data-origin-width="1134" data-origin-height="266"/></span></figure>
+</p>
+<p data-ke-size="size16">이번 문제는 모든 git 문제가 끝났으니 행운을 빈다고 되어있다.</p>
+<p data-ke-size="size16">그럼 한번 bandit32에 로그인해서 살펴보자.</p>
+<p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="778" data-origin-height="426"><span data-url="/assets/images/posts/a79268270a88a7f2b054d0ee481fefcd654d7cd4.png" data-phocus="/assets/images/posts/a79268270a88a7f2b054d0ee481fefcd654d7cd4.png"><img src="/assets/images/posts/a79268270a88a7f2b054d0ee481fefcd654d7cd4.png" loading="lazy" width="778" height="426" data-origin-width="778" data-origin-height="426"/></span></figure>
+</p>
+<p data-ke-size="size16">bandit32에 로그인을 하게 되면 기존에 알던 모습이 아닌 다른 shell로 되어 있는 것 같다. "WELCOME TO THE UPPERCASE SHELL"라는 메시지를 보니 uppercase shell인 것 같다.</p>
+<p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="378" data-origin-height="155"><span data-url="/assets/images/posts/38cf7b5bb4dbefcdb0897feb2abeba3f53734235.png" data-phocus="/assets/images/posts/38cf7b5bb4dbefcdb0897feb2abeba3f53734235.png"><img src="/assets/images/posts/38cf7b5bb4dbefcdb0897feb2abeba3f53734235.png" loading="lazy" width="378" height="155" data-origin-width="378" data-origin-height="155"/></span></figure>
+</p>
+<p data-ke-size="size16">일단 shell은 shell이니 몇 가지 명령어를 입력해 보았다. 분명 나는 소문자로 명령어를 입력했지만 "sh: 1: LS: Permission denied"메시지를 보면 대문자로 자동 변환되어 실행되는 것 같다. 그럼 이 결과를 통해 영어를 입력하면 모두 대문자로 바뀌니 영어를 사용하지 못하거나 대문자 명령어 중 사용할 수 있는 게 있을지 생각해 보았다. 검색해 본 결과 대문자 명령어는 없고 대소문자를 바꾸는 방법들 밖에 없었다.&nbsp;</p>
+<p data-ke-size="size16">그래서 계속해서 검색해 보고 알아본 결과 결국에는 이번 문제를 해결하려면 shell스크립트에 대해 좀 더 알아야 한다.</p>
+<p data-ke-size="size16">이 문제를 해결하기 위해 shell 스크립트 중 환경 변수에 대해 알아보려고 한다. 이전 문제들을 풀면서 "$" 사용했던 기억이 있을 것이다. 이때 "$1"을 쓰게 되면 첫 번째 인자를 뜻하고 "$2"는 두 번째 인자, "$n"은 n번째 인자를 뜻하게 된다. 그럼 $0도 있을까?</p>
+<p data-ke-size="size16">$0은 첫 번째 명령어 자리에 있는 것을 출력한다. 즉 script를 실행시킬 때 프로그램의 이름이 포함된 첫 번째 문자열을 저장하거나 현재 실행 중인 쉘 스크립트 파일의 이름이나 경로를 뜻하는 특수 변수라고 할 수 있다.</p>
+<p data-ke-size="size16">따라서 현재 uppercase shell이 실행된 상태에서 $0이라고 입력하면, 이 프로그램이 실행된 첫 번째 명령어가 다시 실행된다. 현재 실행되고 있는 uppercase shell도 shell기반이라 앞에 /bin/sh이 기본적으로 있지 않을까라는 생각으로 시작해 보겠다.</p>
+<p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="325" data-origin-height="59"><span data-url="/assets/images/posts/7efa9ccfec21c36b2c91a1ed2de1c02c9849a50a.png" data-phocus="/assets/images/posts/7efa9ccfec21c36b2c91a1ed2de1c02c9849a50a.png"><img src="/assets/images/posts/7efa9ccfec21c36b2c91a1ed2de1c02c9849a50a.png" loading="lazy" width="325" height="59" data-origin-width="325" data-origin-height="59"/></span></figure>
+</p>
+<p data-ke-size="size16">명령어 입력창에 $0을 입력해 주면 shell이 실행되는 것을 확인할 수 있다. 즉 환경변수에 등록되어 있는 명령어가 호출된 것이다. 그래서 환경변수에는 /bin/sh이라는 문자가 있었다는 것을 생각할 수도 있다. 그래서 $0을 입력한 것이 /bin/sh을 입력한 것과 똑같은 효과가 나게 된다는 것이다.</p>
+<p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="644" data-origin-height="141"><span data-url="/assets/images/posts/e89c8d6b1ebaa994c661ad272e7ff171463b8d76.png" data-phocus="/assets/images/posts/e89c8d6b1ebaa994c661ad272e7ff171463b8d76.png"><img src="/assets/images/posts/e89c8d6b1ebaa994c661ad272e7ff171463b8d76.png" loading="lazy" width="644" height="141" data-origin-width="644" data-origin-height="141"/></span></figure>
+</p>
+<p data-ke-size="size16">id 명령어로 현재 bandit33으로 로그인되어 있는 것을 확인할 수 있었다. 이제 cat 명령어로 bandit33 비밀번호를 읽어보면 현재까지 출제된 bandit문제가 모두 끝이 난다.</p>
+<p><figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="901" data-origin-height="212"><span data-url="/assets/images/posts/8c886f9feb8ef82575c8826f93f031e2b9d5dac7.png" data-phocus="/assets/images/posts/8c886f9feb8ef82575c8826f93f031e2b9d5dac7.png"><img src="/assets/images/posts/8c886f9feb8ef82575c8826f93f031e2b9d5dac7.png" loading="lazy" width="901" height="212" data-origin-width="901" data-origin-height="212"/></span></figure>
+<figure class="imageblock alignCenter" data-ke-mobileStyle="widthOrigin" data-origin-width="236" data-origin-height="225"><span data-url="/assets/images/posts/f88937dc871710022f0635990cb0d430df787ca3.jpg" data-phocus="/assets/images/posts/f88937dc871710022f0635990cb0d430df787ca3.jpg"><img src="/assets/images/posts/f88937dc871710022f0635990cb0d430df787ca3.jpg" loading="lazy" width="236" height="225" data-origin-width="236" data-origin-height="225"/></span></figure>
+</p>
+<p style="color: #333333; text-align: start;" data-ke-size="size16"><span style="color: #666666;">*bandit 포스팅 규칙으로 인해 일부 결과 이미지는 블러처리하였습니다.</span></p>
+<p style="color: #333333; text-align: start;" data-ke-size="size16"><span style="color: #666666; text-align: start;">*본 글은 프로그래밍 공부를 하며 작성한 글이며, 글에 오류가 있다면 꼭 댓글로 알려주시면 감사하겠습니다.</span></p>
+<p data-ke-size="size16">출처: <a href="https://overthewire.org/wargames/bandit/bandit33.html" target="_blank" rel="noopener&nbsp;noreferrer">https://overthewire.org/wargames/bandit/bandit33.html</a></p></div>
+                    <!-- System - START -->
+        <div class="revenue_unit_wrap">
+  <div class="revenue_unit_item adfit">
+    <div class="revenue_unit_info">728x90</div>
+    <ins class="kakao_ad_area" style="display: none;" data-ad-unit="DAN-m1yq0aTCsUcbylxz" data-ad-width="728px" data-ad-height="90px"></ins>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async="async"></script>
+  </div>
+</div>
+<div class="revenue_unit_wrap">
+  <div class="revenue_unit_item tenping">
+    <div class="revenue_unit_info">LIST</div>
+    <tenping class="adsbytenping" style="width: 100%; max-width: 768px; margin: 0 auto; display: block;" mediaid="5823003" tenping-ad-display-type="67%2be3LHzHbblsB9oLrOpWQ%3d%3d"></tenping>
+    <script src="//tads.tenping.kr/scripts/adsbytenping.min.js" async="async"></script>
+  </div>
+</div>
+        <!-- System - END -->
+
+
+                    <div class="container_postbtn #post_button_group">
+  <div class="postbtn_like"><script>window.ReactionButtonType = 'reaction';
+window.ReactionApiUrl = '//spactcodes.tistory.com/reaction';
+window.ReactionReqBody = {
+    entryId: 86
+}</script>
+<div class="wrap_btn" id="reaction-86" data-tistory-react-app="Reaction"></div><div class="wrap_btn wrap_btn_share"><button type="button" class="btn_post sns_btn btn_share" aria-expanded="false" data-entry-id="86" data-thumbnail-url="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbhaBsY%2FdJMcagGBXtt%2FAAAAAAAAAAAAAAAAAAAAAA5vBuJWAhCIx-MhBow8rJwkn7cOhT-V0RPN7G9luQvR%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3D4UrW81MGm74eXPx4fQ5AXyoiV6c%253D" data-title="Level 33. Bandit33 로그인" data-description="오늘은 Bandit33 문제를 해결해보려고 한다.이번 문제는 모든 git 문제가 끝났으니 행운을 빈다고 되어있다.그럼 한번 bandit32에 로그인해서 살펴보자.bandit32에 로그인을 하게 되면 기존에 알던 모습이 아닌 다른 shell로 되어 있는 것 같다. &quot;WELCOME TO THE UPPERCASE SHELL&quot;라는 메시지를 보니 uppercase shell인 것 같다.일단 shell은 shell이니 몇 가지 명령어를 입력해 보았다. 분명 나는 소문자로 명령어를 입력했지만 &quot;sh: 1: LS: Permission denied&quot;메시지를 보면 대문자로 자동 변환되어 실행되는 것 같다. 그럼 이 결과를 통해 영어를 입력하면 모두 대문자로 바뀌니 영어를 사용하지 못하거나 대문자 명령어 중 사용할 수 있는.." data-profile-image="https://tistory1.daumcdn.net/tistory/5823003/attach/5e39a64fbf22440f8e0f48865435ed0e" data-profile-name="Spact" data-pc-url="https://spactcodes.tistory.com/entry/Level-33-Bandit33-%EB%A1%9C%EA%B7%B8%EC%9D%B8" data-relative-pc-url="/entry/Level-33-Bandit33-%EB%A1%9C%EA%B7%B8%EC%9D%B8" data-blog-title="SpactCode"><span class="ico_postbtn ico_share">공유하기</span></button>
+  <div class="layer_post" id="tistorySnsLayer"></div>
+</div><div class="wrap_btn wrap_btn_etc" data-entry-id="86" data-entry-visibility="public" data-category-visibility="public"><button type="button" class="btn_post btn_etc2" aria-expanded="false"><span class="ico_postbtn ico_etc">게시글 관리</span></button>
+  <div class="layer_post" id="tistoryEtcLayer"></div>
+</div></div>
+<button type="button" class="btn_menu_toolbar btn_subscription #subscribe" data-blog-id="5823003" data-url="https://spactcodes.tistory.com/entry/Level-33-Bandit33-%EB%A1%9C%EA%B7%B8%EC%9D%B8" data-device="web_pc" data-tiara-action-name="구독 버튼_클릭"><em class="txt_state"></em><strong class="txt_tool_id">SpactCode</strong><span class="img_common_tistory ico_check_type1"></span></button><div class="postbtn_ccl" data-ccl-type="1" data-ccl-derive="2">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" target="_blank" class="link_ccl" rel="license">
+        <span class="bundle_ccl">
+            <span class="ico_postbtn ico_ccl1">저작자표시</span> <span class="ico_postbtn ico_ccl2">비영리</span> <span class="ico_postbtn ico_ccl3">변경금지</span> 
+        </span>
+        <span class="screen_out">(새창열림)</span>
+    </a>
+</div>
+<!--
+<rdf:RDF xmlns="https://web.resource.org/cc/" xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Work rdf:about="">
+        <license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" />
+    </Work>
+    <License rdf:about="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko">
+        <permits rdf:resource="https://web.resource.org/cc/Reproduction"/>
+        <permits rdf:resource="https://web.resource.org/cc/Distribution"/>
+        <requires rdf:resource="https://web.resource.org/cc/Notice"/>
+        <requires rdf:resource="https://web.resource.org/cc/Attribution"/>
+        <prohibits rdf:resource="https://web.resource.org/cc/CommercialUse"/>
+
+    </License>
+</rdf:RDF>
+-->  <div data-tistory-react-app="SupportButton"></div>
+</div>
+
+                    <!-- PostListinCategory - START -->
+<div class="another_category another_category_color_gray">
+  <h4>'<a href="/category/Let%27s%20Hack">Let's Hack</a> &gt; <a href="/category/Let%27s%20Hack/Bandit">Bandit</a>' 카테고리의 다른 글</h4>
+  <table>
+    <tr>
+      <th><a href="/entry/Level-32-Bandit31-%EB%A1%9C%EA%B7%B8%EC%9D%B8">Level 32. Bandit32 로그인</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2026.08.05</td>
+    </tr>
+    <tr>
+      <th><a href="/entry/Level-31-Bandit31-%EB%A1%9C%EA%B7%B8%EC%9D%B8">Level 31. Bandit31 로그인</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2026.08.05</td>
+    </tr>
+    <tr>
+      <th><a href="/entry/Level-30-Bandit30-%EB%A1%9C%EA%B7%B8%EC%9D%B8">Level 30. Bandit30 로그인</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2026.08.04</td>
+    </tr>
+    <tr>
+      <th><a href="/entry/Level-29-Bandit29-%EB%A1%9C%EA%B7%B8%EC%9D%B8">Level 29. Bandit29 로그인</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2026.08.04</td>
+    </tr>
+    <tr>
+      <th><a href="/entry/Level-28-Bandit28-%EB%A1%9C%EA%B7%B8%EC%9D%B8">Level 28. Bandit28 로그인</a>&nbsp;&nbsp;<span>(0)</span></th>
+      <td>2026.08.04</td>
+    </tr>
+  </table>
+</div>
+
+<!-- PostListinCategory - END -->
+
+
+

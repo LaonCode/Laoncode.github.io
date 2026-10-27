@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Categories
+title: 카테고리
 permalink: /categories/
 ---
-<section class="archive-page"><p class="eyebrow">// DIRECTORY</p><h1>Categories</h1>{% assign cats = site.categories | sort %}{% for category in cats %}<section id="{{ category[0] | slugify }}" class="archive-category"><h2>{{ category[0] }} <span>{{ category[1].size }}</span></h2><ul>{% for post in category[1] %}<li><time>{{ post.date | date: "%Y.%m.%d" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}</ul></section>{% endfor %}</section>
+<div class="area-common"><h2 class="title-search title-border">카테고리</h2>{% for category in site.categories %}<section><h3><a href="/?category={{ category[0] | url_encode }}">{{ category[0] | escape }} ({{ category[1].size }})</a></h3>{% for post in category[1] %}<p><a href="{{ post.url }}">{{ post.title | escape }}</a></p>{% endfor %}</section>{% endfor %}</div>

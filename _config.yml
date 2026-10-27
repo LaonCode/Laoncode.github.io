@@ -11,7 +11,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
-paginate: 8
+paginate: 10
 paginate_path: "/page:num/"
 defaults:
   - scope:
@@ -20,3 +20,8 @@ defaults:
     values:
       layout: post
       author: Spact
+exclude:
+  - image-map.json
+  - Gemfile
+  - Gemfile.lock
+  - vendor

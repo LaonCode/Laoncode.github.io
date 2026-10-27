@@ -1,0 +1,9 @@
+<div class="hero-neon">
+  <div class="hero-terminal" aria-hidden="true"><div class="hero-terminal-viewport"><div class="hero-terminal-lines" id="hero-terminal-lines"></div></div></div>
+  <div class="hero-pycode" aria-hidden="true"><div class="hero-pycode-viewport"><div class="hero-pycode-lines" id="hero-pycode-lines"></div></div></div>
+  <p class="hero-eyebrow">// SYSTEM ONLINE</p><h2 class="hero-title">Hello World!<br><span class="hero-title-sub">Let's <span id="hero-typer" class="hero-typer">Hack</span><span class="hero-cursor">|</span></span></h2>
+  <p class="hero-desc">#어느 한 대학생의 코딩 일지 #Hacking #Programming</p>
+  <div class="hero-stats" title="방문자 집계 서비스를 연결하면 실제 수치가 표시됩니다">
+  {% assign labels = 'TOTAL VISITORS,TODAY,YESTERDAY' | split: ',' %}{% for label in labels %}<div class="hero-stat"><div class="hero-stat-num" aria-label="방문자 집계 미연결">—</div><div class="hero-stat-label">{{ label }}</div></div>{% endfor %}
+  </div>
+</div>

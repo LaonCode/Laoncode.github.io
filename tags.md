@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tags
+title: 태그
 permalink: /tags/
 ---
-<section class="archive-page"><p class="eyebrow">// INDEX</p><h1>Tags</h1>{% assign tags = site.tags | sort %}{% for tag in tags %}<section id="{{ tag[0] | slugify }}" class="archive-category"><h2>#{{ tag[0] }} <span>{{ tag[1].size }}</span></h2><ul>{% for post in tag[1] %}<li><time>{{ post.date | date: "%Y.%m.%d" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}</ul></section>{% endfor %}</section>
+<div class="area-tag"><h2 class="title-search title-border">Tag</h2><div class="box-tag">{% assign tags = site.tags | sort %}{% for tag in tags %}<a href="/?tag={{ tag[0] | url_encode }}">#{{ tag[0] | escape }} ({{ tag[1].size }})</a>{% endfor %}</div></div>

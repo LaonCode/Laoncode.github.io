@@ -1,1 +1,23 @@
-<!doctype html><html lang="{{ site.lang }}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="{{ '/favicon.ico' | relative_url }}"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">{% seo %}</head><body><header class="site-header"><a class="brand" href="{{ '/' | relative_url }}">Spact<span>Code</span></a><button class="menu-button" aria-label="메뉴 열기" aria-expanded="false">☰</button></header><main>{{ content }}</main><footer>© {{ 'now' | date: "%Y" }} Spact. All rights reserved.</footer><script src="{{ '/assets/js/main.js' | relative_url }}"></script></body></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>try{if(localStorage.getItem('spactcode-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/tistory-original.css">
+  <link rel="stylesheet" href="/assets/css/migration.css">
+  {% seo %}{% feed_meta %}
+</head>
+<body id="{% if page.layout == 'post' %}tt-body-page{% else %}tt-body-index{% endif %}" class="headerslogundisplayon headerbannerdisplayon listmorenumber listmorebuttonmobile use-menu-topnavnone-wrp">
+<div id="wrap" class="wrap-right">
+  <header class="header"><div class="inner-header topnavnone"><div class="area-align"><div class="area-gnb"><nav class="topnavnone"><a href="/">홈</a></nav></div><button class="button-menu" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="sidebar"><svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor"><path d="M0 0h20v2H0zm0 6h20v2H0zm0 6h20v2H0z"/></svg></button></div></div></header>
+  {% unless page.layout == 'post' %}{% include hero.html %}{% endunless %}
+  <div id="container"><main class="main"><div class="area-main">{{ content }}</div>{% include sidebar.html %}</main></div>
+  <footer id="footer"><p>© {{ 'now' | date: '%Y' }} Spact. All rights reserved.</p><a href="/feed.xml">RSS</a> · <a href="https://spactcodes.tistory.com/">티스토리 원본</a></footer>
+</div>
+<dialog id="search-dialog" class="migration-search"><form method="dialog"><div class="search-modal-top"><label for="search-input" class="blind">블로그 검색</label><input id="search-input" class="search-modal-input" type="search" placeholder="찾아보고자 하는 포스팅을 검색해보세요"><button class="search-modal-cancel" aria-label="검색 닫기">Cancel</button></div></form><div class="search-modal-body"><a class="search-modal-tagtitle" href="/tags/">태그 클라우드 이동 ←</a><div class="search-modal-tags" id="search-tags"></div><div id="search-results" aria-live="polite"></div></div></dialog>
+<dialog id="image-dialog"><form method="dialog"><button aria-label="이미지 닫기">닫기 ×</button></form><img alt=""></dialog>
+<script src="/assets/js/original-animations.js" defer></script><script src="/assets/js/main.js" defer></script>
+</body></html>

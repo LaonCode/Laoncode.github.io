@@ -1,5 +1,7 @@
 ---
 layout: default
-title: Home
+title: SpactCode
 ---
-<section class="hero"><div class="code-window" aria-hidden="true"><pre><span>root@SpactCode</span>:<b>~/blog</b>$ <i id="terminal-line"></i><em>▋</em></pre></div><p class="eyebrow">// SYSTEM ONLINE</p><h1>Hello World!<br><span>Let's <i id="hero-typer"></i><em>|</em></span></h1><p>{{ site.description }}</p></section><section class="content-grid"><div><div class="section-heading"><p>Latest entries</p><h2>최근 글</h2></div><div class="post-list">{% for post in paginator.posts %}<article class="post-card">{% if post.image %}<a class="post-image" href="{{ post.url | relative_url }}" style="background-image:url('{{ post.image | relative_url }}')"></a>{% endif %}<div><div class="post-meta"><a href="{{ '/categories/#' | append: post.categories.first | slugify | relative_url }}">{{ post.categories | join: ' / ' }}</a><time>{{ post.date | date: "%Y.%m.%d" }}</time></div><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p><a class="read-more" href="{{ post.url | relative_url }}">READ POST →</a></div></article>{% endfor %}</div></div>{% include sidebar.html %}</section>
+<div class="area-common"><h2 class="title-search article-title-thumbnail title-border"><b id="list-title">전체 글</b> <span id="list-count">{{ site.posts.size }}</span></h2><div id="post-list">
+{% for post in paginator.posts %}{% include card.html post=post %}{% endfor %}
+</div><nav class="area-paging" id="pagination" aria-label="글 목록 페이지">{% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}">이전</a>{% endif %}{% for number in (1..paginator.total_pages) %}<a {% if number == paginator.page %}aria-current="page" class="selected"{% endif %} href="{% if number == 1 %}/{% else %}/page{{ number }}/{% endif %}">{{ number }}</a>{% endfor %}{% if paginator.next_page %}<a href="{{ paginator.next_page_path }}">다음</a>{% endif %}</nav></div>
