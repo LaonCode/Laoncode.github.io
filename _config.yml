@@ -25,6 +25,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - tools
+  - templates
+  - WRITING-GUIDE.md
 
 featured_categories:
   - "개발"

