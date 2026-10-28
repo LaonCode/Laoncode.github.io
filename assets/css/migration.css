@@ -38,6 +38,8 @@ html[data-theme="dark"] .bg-dimmed:before{background:rgba(0,0,0,.65)}
 
 /* Mobile drawer enters from the left; its toggle stays above the overlay. */
 @media(max-width:1060px){
+  /* Override the legacy post-page header border above both the page and drawer. */
+  #wrap.wrap-right > .header{border:0;box-shadow:none;background:transparent}
   .wrap-right .header{position:fixed;top:0;left:0;width:100%;height:60px;z-index:50;pointer-events:none}
   .wrap-right .header .button-menu{position:fixed;top:8px;right:12px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;padding:10px;z-index:51;pointer-events:auto;background:var(--bg-panel);border:1px solid var(--border-dim);border-radius:9px;color:var(--text-main)}
   .header .button-menu[aria-expanded="true"] svg{display:none}.header .button-menu[aria-expanded="true"]:after{content:'×';font-size:28px;line-height:1}
