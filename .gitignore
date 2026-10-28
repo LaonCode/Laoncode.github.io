@@ -2,3 +2,6 @@ image-map.json
 _site/
 .jekyll-cache/
 vendor/
+
+# Local writing guide (not published)
+WRITING-GUIDE.md
