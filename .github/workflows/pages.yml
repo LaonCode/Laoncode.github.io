@@ -25,7 +25,9 @@ jobs:
         run: python3 tools/verify-migration.py _site
       - name: Generate link previews
         timeout-minutes: 5
-        run: python3 tools/build-link-previews.py _site
+        run: |
+          python3 tools/build-link-previews.py _site "$RUNNER_TEMP/link-previews.json"
+          sudo install -m 644 "$RUNNER_TEMP/link-previews.json" _site/assets/link-previews.json
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site

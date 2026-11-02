@@ -74,5 +74,6 @@ for page in (root/'entry').rglob('index.html'):
     parser=Links(); parser.feed(page.read_text(encoding='utf-8')); urls.update(parser.urls)
 urls=sorted(u for u in urls if u.startswith(('https://','http://')) and urlsplit(u).hostname not in ('laoncode.github.io','spactcode.github.io'))
 with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool: data=dict(pool.map(preview,urls))
-(root/'assets'/'link-previews.json').write_text(json.dumps(data,ensure_ascii=False),encoding='utf-8')
+output=Path(sys.argv[2]) if len(sys.argv)>2 else root/'assets'/'link-previews.json'
+output.write_text(json.dumps(data,ensure_ascii=False),encoding='utf-8')
 print(f'Link previews: {sum(bool(v) for v in data.values())}/{len(urls)}; others use compact fallback links.')
