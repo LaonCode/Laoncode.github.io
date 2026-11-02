@@ -32,7 +32,7 @@
     code.textContent=code.textContent;
     hljs.highlightElement(code);
   });
-  body?.querySelectorAll('pre').forEach(pre=>{const button=el('button','copy-code','복사');button.type='button';pre.before(button);button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(pre.textContent);button.textContent='복사됨';setTimeout(()=>button.textContent='복사',1500);}catch(e){button.textContent='복사하려면 코드를 선택해주세요';}});});
+  body?.querySelectorAll('pre').forEach(pre=>{const button=el('button','copy-code','복사');button.type='button';const source=pre.querySelector('code')||pre;const text=source.textContent;button.setAttribute('aria-label','코드 복사');button.setAttribute('aria-live','polite');pre.append(button);button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(text);button.textContent='복사됨';setTimeout(()=>button.textContent='복사',1500);}catch(e){button.textContent='복사하려면 코드를 선택해주세요';}});});
   body?.querySelectorAll('img').forEach(img=>{img.addEventListener('click',e=>{e.preventDefault();const d=$('#image-dialog');d.querySelector('img').src=img.currentSrc||img.src;d.querySelector('img').alt=img.alt;d.showModal();});});
   const banner=body?.querySelector('img[alt="배너"]');if(banner){$('.article-header').style.backgroundImage='url("'+banner.src+'")';(banner.closest('figure')||banner).hidden=true;}
   const repoList=$('#github-repo-list');
