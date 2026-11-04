@@ -106,3 +106,4 @@ html[data-theme="dark"] .bg-dimmed:before{background:rgba(0,0,0,.65)}
 #calendar .calendar-day.has-posts:hover{background:rgba(60,140,255,.2)}
 #calendar .calendar-note{margin:12px 0 0;padding:12px 0 0;border-top:1px solid var(--border-dim);font-size:11px;line-height:1.6;color:var(--text-dim);text-align:center}
 #calendar a:focus-visible,#calendar button:focus-visible,#archives a:focus-visible{outline:2px solid var(--neon-blue);outline-offset:2px}
+#sidebar #calendar.inner-calendar{padding:0;border:0;background:transparent;border-radius:0;box-shadow:none}
