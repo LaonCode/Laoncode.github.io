@@ -145,3 +145,18 @@ html[data-theme="dark"] .bg-dimmed:before{background:rgba(0,0,0,.65)}
 #sidebar #recent-list li:first-child .box-recent strong::after{display:none}
 #sidebar>.box-notice>p{margin:0;padding:14px 10px;border:1px dashed var(--border-dim);border-radius:8px;background:rgba(60,140,255,.025);color:var(--text-dim);text-align:center;font-size:12px;line-height:1.8;word-break:keep-all}
 #sidebar .box-category a:focus-visible,#sidebar .box-github a:focus-visible,#sidebar .box-recent a:focus-visible{outline:2px solid var(--neon-blue);outline-offset:-2px}
+
+/* Compact navigation labels stay on one line; long names retain their full link title. */
+#sidebar>.box-category{padding:18px 10px}
+#sidebar .box-category .category-toggle{width:20px}
+#sidebar .box-category .tt_category .category-row .link_item{padding:10px 4px;gap:5px;white-space:nowrap;overflow:hidden}
+#sidebar .category-label{display:block;min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:inherit}
+#sidebar .box-category .tt_category .c_cnt{padding:1px 4px}
+#sidebar .box-category .tt_category .sub_category_list .link_sub_item{min-width:0;white-space:nowrap;overflow:hidden}
+#sidebar #recent-list .box-recent strong{display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+#sidebar .github-repo-name{display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+#sidebar .title-sidebar{white-space:nowrap}
+.category-card strong{display:block;min-width:0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.area-paging a{min-width:28px;min-height:28px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;text-decoration:none}
+.area-paging a:hover,.area-paging a.selected{background:rgba(60,140,255,.09)}
+button,a{-webkit-tap-highlight-color:rgba(60,140,255,.12)}

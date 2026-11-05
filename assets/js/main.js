@@ -55,7 +55,7 @@
     featured.forEach(name=>{if(!groups.has(name))groups.set(name,{count:0,children:new Map()});});
     for(const parent of [...featured,"Let's Hack","Let's Doit!","Let's Lead","Let's Pay1oad",...groups.keys()].filter((x,i,a)=>a.indexOf(x)===i)) {
       const g=groups.get(parent);if(!g)continue;
-      const li=el('li'),row=el('div','category-row'),a=link(parent,query('category',parent),'link_item');
+      const li=el('li'),row=el('div','category-row'),a=link('',query('category',parent),'link_item');a.title=parent;a.append(el('span','category-label',parent));
       a.append(el('span','c_cnt',' ('+g.count+')'));if(category===parent)a.classList.add('selected');row.append(a);li.append(row);
       if(g.children.size){
         const ul=el('ul','sub_category_list');ul.id='category-children-'+tree.children.length;
@@ -64,7 +64,7 @@
         ul.hidden=!expanded;
         const toggle=el('button','category-toggle',expanded?'▾':'▸');toggle.type='button';toggle.setAttribute('aria-controls',ul.id);toggle.setAttribute('aria-expanded',String(expanded));toggle.setAttribute('aria-label',parent+' 하위 분류 '+(expanded?'접기':'펼치기'));
         toggle.addEventListener('click',()=>{const open=ul.hidden;ul.hidden=!open;toggle.textContent=open?'▾':'▸';toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',parent+' 하위 분류 '+(open?'접기':'펼치기'));try{localStorage.setItem('category-open:'+parent,String(open));}catch(e){}});row.prepend(toggle);
-        for(const [name,count] of g.children){const child=el('li'),sub=link(name,query('category',parent+'/'+name),'link_sub_item');sub.append(el('span','c_cnt',' ('+count+')'));if(category===parent+'/'+name)sub.classList.add('selected');child.append(sub);ul.append(child);}li.append(ul);
+        for(const [name,count] of g.children){const child=el('li'),sub=link('',query('category',parent+'/'+name),'link_sub_item');sub.title=name;sub.append(el('span','category-label',name));sub.append(el('span','c_cnt',' ('+count+')'));if(category===parent+'/'+name)sub.classList.add('selected');child.append(sub);ul.append(child);}li.append(ul);
       }
       tree.append(li);
     }
