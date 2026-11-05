@@ -2,7 +2,7 @@
 param(
     [string]$Title,
     [string]$Slug,
-    [ValidateSet('개발','CTF/Wargame','Bug Bounty','블로그/기술문서','논문/컨퍼런스','공모전/자격증')]
+    [ValidateSet('개발','CTF/Wargame','Bug Bounty','블로그/기술문서/리서치','논문/컨퍼런스','공모전/자격증')]
     [string]$Category,
     [string[]]$Tags = @()
 )
@@ -12,7 +12,7 @@ if ([string]::IsNullOrWhiteSpace($Title)) { $Title = Read-Host '글 제목' }
 if ([string]::IsNullOrWhiteSpace($Title)) { throw '제목을 입력해주세요.' }
 if ([string]::IsNullOrWhiteSpace($Slug)) { $Slug = Read-Host '주소에 쓸 영문 이름 (예: python-study-01)' }
 if ($Slug -notmatch '^[a-z0-9]+(?:-[a-z0-9]+)*$') { throw '주소는 영문 소문자, 숫자, 하이픈으로 입력해주세요.' }
-$categories = @('개발','CTF/Wargame','Bug Bounty','블로그/기술문서','논문/컨퍼런스','공모전/자격증')
+$categories = @('개발','CTF/Wargame','Bug Bounty','블로그/기술문서/리서치','논문/컨퍼런스','공모전/자격증')
 if (!$Category) {
     for ($i=0; $i -lt $categories.Count; $i++) { Write-Host "$($i+1). $($categories[$i])" }
     $choice = Read-Host '분류 번호'

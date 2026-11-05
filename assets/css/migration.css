@@ -163,3 +163,6 @@ button,a{-webkit-tap-highlight-color:rgba(60,140,255,.12)}
 
 #sidebar .box-category .tt_category .sub_category_list .category-row .link_item{font-size:11px;padding:8px 3px;color:var(--text-dim)}
 #sidebar .box-category .tt_category .sub_category_list .sub_category_list{margin-left:5px;padding-left:5px}
+
+/* Article labels follow the active theme instead of pasted white backgrounds. */
+#article-view .article-section-label{display:inline-block;padding:3px 9px;border:1px solid var(--border-dim);border-radius:5px;background:var(--bg-panel)!important;color:var(--text-main)!important;line-height:1.6}
