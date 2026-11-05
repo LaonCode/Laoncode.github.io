@@ -40,7 +40,7 @@
   function card(post){const article=el('article','article-type-common article-type-thumbnail');if(post.image){const a=link('',post.url,'link-article thumbnail-link');a.setAttribute('aria-label',post.title);const p=el('p','thumbnail');p.setAttribute('has-thumbnail','1');p.style.backgroundImage='url("'+post.image+'")';const img=el('img','img-thumbnail');img.src=post.image;img.alt='';img.loading='lazy';p.append(img);a.append(p);article.append(a);}const content=el('div','article-content'),a=link('',post.url,'link-article');a.append(el('strong','title',post.title),el('p','summary',post.summary));const meta=el('div','box-meta');meta.append(link(post.category,query('category',post.category),'link-category'),el('span','date',post.date.replaceAll('-','.')));content.append(a,meta);article.append(content);return article;}
   fetch('/search.json').then(r=>{if(!r.ok)throw Error('index');return r.json();}).then(posts=>{
     const params=new URLSearchParams(location.search);let filtered=posts;
-    const originalCategory=params.get('category'); const category=originalCategory?.replace(/^Let\'s Hack\/Bandit/,'CTF/Wargame/Bandit').replace(/^Let\'s Coding/,"Let's Doit!"); const tag=params.get('tag'),q=params.get('q'),archive=params.get('archive');
+    const originalCategory=params.get('category'); const category=originalCategory?.replace(/^Let\'s Hack\/Bandit/,'CTF/Wargame/Bandit').replace(/^Let\'s Coding/,"Let's Doit!").replace(/^(Let's Hack|Let's Doit!|Let's Lead)(?=\/|$)/,"블로그/기술문서/$1"); const tag=params.get('tag'),q=params.get('q'),archive=params.get('archive');
     if(category)filtered=filtered.filter(p=>p.category===category||p.category.startsWith(category+'/'));
     if(tag)filtered=filtered.filter(p=>(p.tags||[]).includes(tag));
     if(q)filtered=filtered.filter(p=>(p.title+' '+p.text+' '+p.category).toLocaleLowerCase().includes(q.toLocaleLowerCase()));
@@ -50,24 +50,32 @@
       const pages=Math.max(1,Math.ceil(filtered.length/10)),page=Math.min(pages,Math.max(1,parseInt(params.get('page')||'1',10)||1));list.replaceChildren(...filtered.slice((page-1)*10,page*10).map(card));if(!filtered.length)list.append(el('p','box-no-search',category?'아직 이 분류에 등록된 글이 없습니다.':'검색 결과가 없습니다.'));
       const pagination=$('#pagination');pagination.replaceChildren();for(let i=1;i<=pages;i++){const v=new URLSearchParams(params);v.set('page',i);const a=link(String(i),'/?'+v,i===page?'selected':'');if(i===page)a.setAttribute('aria-current','page');pagination.append(a);}
     }
-    const tree=$('#category-tree'),featured=JSON.parse(tree.dataset.featured||'[]'),groups=new Map();posts.forEach(p=>{const known=featured.find(name=>p.category===name||p.category.startsWith(name+'/'));const [parent,...rest]=known?[known,...(p.category===known?[]:[p.category.slice(known.length+1)])]:p.category.split('/');if(!groups.has(parent))groups.set(parent,{count:0,children:new Map()});const g=groups.get(parent);g.count++;if(rest.length){const name=rest.join('/');g.children.set(name,(g.children.get(name)||0)+1);}});tree.replaceChildren();
-
+    const tree=$('#category-tree'),featured=JSON.parse(tree.dataset.featured||'[]'),groups=new Map();
+    posts.forEach(p=>{
+      const known=[...featured].sort((a,b)=>b.length-a.length).find(name=>p.category===name||p.category.startsWith(name+'/'));
+      const parts=known?[known,...p.category.slice(known.length+1).split('/').filter(Boolean)]:p.category.split('/');
+      let level=groups;
+      for(const name of parts){if(!level.has(name))level.set(name,{count:0,children:new Map()});const node=level.get(name);node.count++;level=node.children;}
+    });
     featured.forEach(name=>{if(!groups.has(name))groups.set(name,{count:0,children:new Map()});});
-    for(const parent of [...featured,"Let's Hack","Let's Doit!","Let's Lead","Let's Pay1oad",...groups.keys()].filter((x,i,a)=>a.indexOf(x)===i)) {
-      const g=groups.get(parent);if(!g)continue;
-      const li=el('li'),row=el('div','category-row'),a=link('',query('category',parent),'link_item');a.title=parent;a.append(el('span','category-label',parent));
-      a.append(el('span','c_cnt',' ('+g.count+')'));if(category===parent)a.classList.add('selected');row.append(a);li.append(row);
-      if(g.children.size){
-        const ul=el('ul','sub_category_list');ul.id='category-children-'+tree.children.length;
-        let expanded=category===parent||Boolean(category?.startsWith(parent+'/'));
-        try{const saved=localStorage.getItem('category-open:'+parent);if(saved!==null&&!expanded)expanded=saved==='true';}catch(e){}
+    tree.replaceChildren();let branchId=0;
+    function renderCategory(name,node,path,container){
+      const li=el('li'),row=el('div','category-row'),a=link('',query('category',path),'link_item');
+      a.title=path;a.append(el('span','category-label',name),el('span','c_cnt',' ('+node.count+')'));
+      if(category===path)a.classList.add('selected');row.append(a);li.append(row);
+      if(node.children.size){
+        const ul=el('ul','sub_category_list');ul.id='category-children-'+branchId++;
+        let expanded=category===path||Boolean(category?.startsWith(path+'/'));
+        try{const saved=localStorage.getItem('category-open:'+path);if(saved!==null&&!expanded)expanded=saved==='true';}catch(e){}
         ul.hidden=!expanded;
-        const toggle=el('button','category-toggle',expanded?'▾':'▸');toggle.type='button';toggle.setAttribute('aria-controls',ul.id);toggle.setAttribute('aria-expanded',String(expanded));toggle.setAttribute('aria-label',parent+' 하위 분류 '+(expanded?'접기':'펼치기'));
-        toggle.addEventListener('click',()=>{const open=ul.hidden;ul.hidden=!open;toggle.textContent=open?'▾':'▸';toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',parent+' 하위 분류 '+(open?'접기':'펼치기'));try{localStorage.setItem('category-open:'+parent,String(open));}catch(e){}});row.prepend(toggle);
-        for(const [name,count] of g.children){const child=el('li'),sub=link('',query('category',parent+'/'+name),'link_sub_item');sub.title=name;sub.append(el('span','category-label',name));sub.append(el('span','c_cnt',' ('+count+')'));if(category===parent+'/'+name)sub.classList.add('selected');child.append(sub);ul.append(child);}li.append(ul);
+        const toggle=el('button','category-toggle',expanded?'▾':'▸');toggle.type='button';toggle.setAttribute('aria-controls',ul.id);toggle.setAttribute('aria-expanded',String(expanded));toggle.setAttribute('aria-label',name+' 하위 분류 '+(expanded?'접기':'펼치기'));
+        toggle.addEventListener('click',()=>{const open=ul.hidden;ul.hidden=!open;toggle.textContent=open?'▾':'▸';toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',name+' 하위 분류 '+(open?'접기':'펼치기'));try{localStorage.setItem('category-open:'+path,String(open));}catch(e){}});row.prepend(toggle);
+        for(const [childName,child] of node.children)renderCategory(childName,child,path+'/'+childName,ul);
+        li.append(ul);
       }
-      tree.append(li);
+      container.append(li);
     }
+    for(const name of [...featured,...groups.keys()].filter((x,i,a)=>a.indexOf(x)===i))renderCategory(name,groups.get(name),name,tree);
     const tags=[...new Set(posts.flatMap(p=>p.tags||[]))].sort();$('#search-tags').replaceChildren(...tags.map(t=>link('#'+t,query('tag',t))));
     const input=$('#search-input'),results=$('#search-results');input.addEventListener('input',()=>{const value=input.value.trim().toLocaleLowerCase();results.replaceChildren();if(!value)return;const matches=posts.filter(p=>(p.title+' '+p.text+' '+p.category+' '+(p.tags||[]).join(' ')).toLocaleLowerCase().includes(value));matches.slice(0,12).forEach(p=>{const a=link(p.title,p.url);a.append(el('small','',p.date+' · '+p.category));results.append(a);});if(!matches.length)results.textContent='검색 결과가 없습니다.';else results.append(link('전체 결과 '+matches.length+'개 보기',query('q',input.value)));});input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();if(input.value.trim())location.href=query('q',input.value.trim());}});
     const monthCounts=new Map(), dayCounts=new Map();

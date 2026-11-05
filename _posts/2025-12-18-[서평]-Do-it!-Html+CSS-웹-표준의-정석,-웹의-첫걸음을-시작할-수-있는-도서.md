@@ -2,7 +2,7 @@
 layout: post
 title: "[서평] Do it! Html+CSS 웹 표준의 정석, 웹의 첫걸음을 시작할 수 있는 도서"
 date: 2025-12-18 10:09:51 +09:00
-categories: ["Let's Lead/Do it!"]
+categories: ["블로그/기술문서/Let's Lead/Do it!"]
 tags: ["CSS","do it!","Do it! HTML+CSS 웹 표준의 정석","HTML","서평","웹","웹 기초","이지스퍼블리싱"]
 permalink: "/entry/서평-Do-it-HtmlCSS-웹-표준의-정석-웹의-첫걸음을-시작할-수-있는-도서/"
 legacy_url: "https://spactcodes.tistory.com/entry/%EC%84%9C%ED%8F%89-Do-it-HtmlCSS-%EC%9B%B9-%ED%91%9C%EC%A4%80%EC%9D%98-%EC%A0%95%EC%84%9D-%EC%9B%B9%EC%9D%98-%EC%B2%AB%EA%B1%B8%EC%9D%8C%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%8F%84%EC%84%9C"
