@@ -107,3 +107,41 @@ html[data-theme="dark"] .bg-dimmed:before{background:rgba(0,0,0,.65)}
 #calendar .calendar-note{margin:12px 0 0;padding:12px 0 0;border-top:1px solid var(--border-dim);font-size:11px;line-height:1.6;color:var(--text-dim);text-align:center}
 #calendar a:focus-visible,#calendar button:focus-visible,#archives a:focus-visible{outline:2px solid var(--neon-blue);outline-offset:2px}
 #sidebar #calendar.inner-calendar{padding:0;border:0;background:transparent;border-radius:0;box-shadow:none}
+
+/* Shared sidebar panels with lightweight rows instead of nested heavy cards. */
+#sidebar>.box-category,#sidebar>.box-github,#sidebar>.box-recent,#sidebar>.box-notice{box-sizing:border-box;padding:18px 14px;margin:0 0 28px;border:1px solid var(--border-dim);border-radius:14px;background:var(--bg-panel);box-shadow:0 4px 18px rgba(0,119,255,.04)}
+#sidebar>.box-github>.title-sidebar,#sidebar>.box-recent>.title-sidebar,#sidebar>.box-notice>.title-sidebar{margin:0 0 16px}
+#sidebar .box-category .tt_category,#sidebar .box-category .category_list{margin:0;padding:0;list-style:none}
+#sidebar .box-category .tt_category .link_tit{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 0 16px;margin:0 0 10px;border:0;border-bottom:1px solid var(--border-dim);border-radius:0;background:transparent;color:var(--neon-blue);font-size:13px;text-decoration:none;box-shadow:none}
+#sidebar .box-category .tt_category .link_tit:before{display:none}
+#sidebar .box-category .category_list>li{margin:4px 0;padding:0}
+#sidebar .box-category .tt_category .category-row{border:1px solid transparent;background:transparent;border-radius:8px;overflow:hidden}
+#sidebar .box-category .tt_category .category-row:hover,#sidebar .box-category .tt_category .category-row:has(.selected){background:rgba(60,140,255,.08);border-color:var(--border-dim)}
+#sidebar .box-category .tt_category .category-row .link_item{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:10px 8px;font-size:12px;line-height:1.6;color:var(--text-main);word-break:keep-all;overflow-wrap:anywhere;box-shadow:none;transform:none}
+#sidebar .box-category .category-toggle{width:26px;border:0;background:transparent;font-size:13px}
+#sidebar .box-category .tt_category .c_cnt{display:inline-block;flex-shrink:0;background:rgba(60,140,255,.08);color:var(--neon-blue);border-radius:12px;padding:1px 6px;font:10px/1.6 var(--font-mono);margin:0}
+#sidebar .box-category .tt_category .sub_category_list{margin:5px 0 10px 12px;padding:0 0 0 10px;border-left:1px solid var(--border-dim);list-style:none;background:transparent}
+#sidebar .box-category .tt_category .sub_category_list li{margin:0;padding:0}
+#sidebar .box-category .tt_category .sub_category_list .link_sub_item{display:flex;justify-content:space-between;align-items:center;gap:5px;padding:8px 6px;border:0;border-radius:6px;background:transparent;font-size:11px;line-height:1.6;color:var(--text-dim);text-decoration:none;word-break:keep-all;overflow-wrap:anywhere}
+#sidebar .box-category .tt_category .sub_category_list .link_sub_item:before{display:none}
+#sidebar .box-category .tt_category .sub_category_list .link_sub_item:hover,#sidebar .box-category .tt_category .sub_category_list .selected{background:rgba(60,140,255,.08);color:var(--neon-blue)}
+#sidebar .github-repo-item{border:0;border-bottom:1px solid var(--border-dim);border-radius:0;margin:0;padding:0;background:transparent}
+#sidebar .github-repo-item:last-child{border-bottom:0}
+#sidebar .github-repo-item a{padding:12px 6px;border-radius:8px}
+#sidebar .github-repo-item:hover{transform:none;box-shadow:none;border-color:var(--border-dim)}
+#sidebar .github-repo-item a:hover{background:rgba(60,140,255,.07)}
+#sidebar .github-repo-name{font-size:12px;line-height:1.6;overflow-wrap:anywhere;color:var(--neon-blue)}
+#sidebar .github-repo-desc{font-size:11px;margin:4px 0 7px}
+#sidebar .github-repo-meta{font-size:10px;color:var(--text-dim)}
+#sidebar #recent-list{margin:0;padding:0;list-style:none}
+#sidebar #recent-list li{margin:0;padding:0;border:0;border-bottom:1px solid var(--border-dim);border-radius:0;background:transparent}
+#sidebar #recent-list li:last-child{border-bottom:0}
+#sidebar #recent-list li:hover{transform:none;box-shadow:none;background:transparent}
+#sidebar #recent-list .link-recent{display:block;padding:12px 6px;border-radius:8px;text-decoration:none}
+#sidebar #recent-list .link-recent:hover{background:rgba(60,140,255,.07)}
+#sidebar #recent-list .box-recent{width:auto;margin:0;padding:0;border:0;background:transparent;box-shadow:none}
+#sidebar #recent-list .box-recent strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:normal;font-size:12px;line-height:1.7;font-weight:600;color:var(--text-main)}
+#sidebar #recent-list .box-recent span{display:block;margin-top:6px;font:10px/1.5 var(--font-mono);color:var(--text-dim)}
+#sidebar #recent-list li:first-child .box-recent strong::after{display:none}
+#sidebar>.box-notice>p{margin:0;padding:14px 10px;border:1px dashed var(--border-dim);border-radius:8px;background:rgba(60,140,255,.025);color:var(--text-dim);text-align:center;font-size:12px;line-height:1.8;word-break:keep-all}
+#sidebar .box-category a:focus-visible,#sidebar .box-github a:focus-visible,#sidebar .box-recent a:focus-visible{outline:2px solid var(--neon-blue);outline-offset:-2px}
