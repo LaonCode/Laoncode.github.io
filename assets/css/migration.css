@@ -166,3 +166,11 @@ button,a{-webkit-tap-highlight-color:rgba(60,140,255,.12)}
 
 /* Article labels follow the active theme instead of pasted white backgrounds. */
 #article-view .article-section-label{display:inline-block;padding:3px 9px;border:1px solid var(--border-dim);border-radius:5px;background:var(--bg-panel)!important;color:var(--text-main)!important;line-height:1.6}
+
+/* Folder disclosure shares the text color and retains the compact label space. */
+#sidebar .box-category .category-toggle{display:flex;align-items:center;justify-content:center;padding:0;border-radius:6px;color:var(--neon-blue)}
+.category-folder{display:block;width:16px;height:16px;flex-shrink:0;overflow:visible;fill:rgba(60,140,255,.12);stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.category-folder .folder-open{display:none}
+.category-toggle[aria-expanded="true"] .folder-closed{display:none}
+.category-toggle[aria-expanded="true"] .folder-open{display:inline}
+#sidebar .box-category .category-toggle:hover{background:rgba(60,140,255,.12)}

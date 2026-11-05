@@ -68,8 +68,9 @@
         let expanded=category===path||Boolean(category?.startsWith(path+'/'));
         try{const saved=localStorage.getItem('category-open:'+path);if(saved!==null&&!expanded)expanded=saved==='true';}catch(e){}
         ul.hidden=!expanded;
-        const toggle=el('button','category-toggle',expanded?'▾':'▸');toggle.type='button';toggle.setAttribute('aria-controls',ul.id);toggle.setAttribute('aria-expanded',String(expanded));toggle.setAttribute('aria-label',name+' 하위 분류 '+(expanded?'접기':'펼치기'));
-        toggle.addEventListener('click',()=>{const open=ul.hidden;ul.hidden=!open;toggle.textContent=open?'▾':'▸';toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',name+' 하위 분류 '+(open?'접기':'펼치기'));try{localStorage.setItem('category-open:'+path,String(open));}catch(e){}});row.prepend(toggle);
+        const toggle=el('button','category-toggle');
+        toggle.innerHTML='<svg class="category-folder" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="folder-closed" d="M3 6a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z"/><g class="folder-open"><path d="M3 18V6a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v2"/><path d="M3 20h16l3-9H6Z"/></g></svg>';toggle.type='button';toggle.setAttribute('aria-controls',ul.id);toggle.setAttribute('aria-expanded',String(expanded));toggle.setAttribute('aria-label',name+' 하위 분류 '+(expanded?'접기':'펼치기'));
+        toggle.addEventListener('click',()=>{const open=ul.hidden;ul.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',name+' 하위 분류 '+(open?'접기':'펼치기'));try{localStorage.setItem('category-open:'+path,String(open));}catch(e){}});row.prepend(toggle);
         for(const [childName,child] of node.children)renderCategory(childName,child,path+'/'+childName,ul);
         li.append(ul);
       }
