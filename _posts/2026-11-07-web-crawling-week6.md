@@ -43,7 +43,11 @@ image: "/assets/images/posts/crawling-week6-cover-e04a557fbeb8.png"
 
 <strong>BFS</strong>는 시작점에서 <strong>가까운 페이지부터 차례대로</strong> 방문하는 방식이다. 아래 자료를 예로 들면 A를 방문한 뒤 A와 바로 연결된 B, C를 먼저 모두 방문하고, 그다음 한 단계 더 떨어진 D, E, F, G를 방문한다. 방문 순서는 <strong>A → B → C → D → E → F → G </strong> 이다.
 
-<figure class="imagegridblock"><div class="image-container"><span data-url="/assets/images/posts/crawling-week6-52488657152c.png" data-phocus="/assets/images/posts/crawling-week6-52488657152c.png" data-origin-width="551" data-origin-height="235" data-is-animation="false" data-widthpercent="32.6" style="width: 31.8418%; margin-right: 10px;"><img src="/assets/images/posts/crawling-week6-52488657152c.png" loading="lazy" width="551" height="235"></span><span data-url="/assets/images/posts/crawling-week6-c3246ca0ca43.png" data-phocus="/assets/images/posts/crawling-week6-c3246ca0ca43.png" data-origin-width="558" data-origin-height="230" data-is-animation="false" style="width: 32.9473%; margin-right: 10px;" data-widthpercent="33.73"><img src="/assets/images/posts/crawling-week6-c3246ca0ca43.png" loading="lazy" width="558" height="230"></span><span data-url="/assets/images/posts/crawling-week6-c116fcd287a6.png" data-phocus="/assets/images/posts/crawling-week6-c116fcd287a6.png" data-origin-width="540" data-origin-height="223" data-is-animation="false" style="width: 32.8853%;" data-widthpercent="33.67"><img src="/assets/images/posts/crawling-week6-c116fcd287a6.png" loading="lazy" width="540" height="223"></span></div><figcaption>A → B → C → D → E → F → G</figcaption></figure>
+<figure class="imageblock alignCenter"><img src="/assets/images/posts/crawling-week6-52488657152c.png" loading="lazy" width="551" height="235"></figure>
+
+<figure class="imageblock alignCenter"><img src="/assets/images/posts/crawling-week6-c3246ca0ca43.png" loading="lazy" width="558" height="230"></figure>
+
+<figure class="imageblock alignCenter"><img src="/assets/images/posts/crawling-week6-c116fcd287a6.png" loading="lazy" width="540" height="223"><figcaption>A → B → C → D → E → F → G</figcaption></figure>
 
 이 방식은 <strong>큐(Queue)</strong>로 구현한다. 큐는 먼저 들어간 것이 먼저 나오는 <strong>FIFO(First In, First Out)</strong> 구조로, 새로 발견한 링크는 줄의 맨 뒤에 서고, 크롤러는 항상 줄의 맨 앞에서 다음 URL을 꺼낸다. 그래서 먼저 발견된(= 시작점에 가까운) 페이지가 먼저 방문된다.
 
@@ -67,9 +71,15 @@ image: "/assets/images/posts/crawling-week6-cover-e04a557fbeb8.png"
 
 <strong>DFS</strong>는 <strong>한 갈래를 끝까지 파고든 뒤</strong> 돌아와서 다른 갈래로 가는 방식이다. 아래 자료를 예로 들면 A에서 B로 내려가고, B에서 D까지 끝까지 내려간다. 더 갈 곳이 없으면 돌아와서 E를 방문하고, B 갈래가 끝나면 C 갈래로 넘어간다. 방문 순서는 <strong>A → B → D → E → C → F → G</strong>입니다.
 
-<figure class="imagegridblock"><div class="image-container"><span data-url="/assets/images/posts/crawling-week6-715d2084bbe3.png" data-phocus="/assets/images/posts/crawling-week6-715d2084bbe3.png" data-origin-width="533" data-origin-height="221" data-is-animation="false" data-widthpercent="33.33" style="width: 32.5537%; margin-right: 10px;"><img src="/assets/images/posts/crawling-week6-715d2084bbe3.png" loading="lazy" width="533" height="221"></span><span data-url="/assets/images/posts/crawling-week6-a229f18085f4.png" data-phocus="/assets/images/posts/crawling-week6-a229f18085f4.png" data-origin-width="538" data-origin-height="224" data-is-animation="false" style="width: 32.419%; margin-right: 10px;" data-widthpercent="33.19"><img src="/assets/images/posts/crawling-week6-a229f18085f4.png" loading="lazy" width="538" height="224"></span><span data-url="/assets/images/posts/crawling-week6-18f675c94c69.png" data-phocus="/assets/images/posts/crawling-week6-18f675c94c69.png" data-origin-width="533" data-origin-height="220" data-is-animation="false" style="width: 32.7017%;" data-widthpercent="33.48"><img src="/assets/images/posts/crawling-week6-18f675c94c69.png" loading="lazy" width="533" height="220"></span></div></figure>
+<figure class="imageblock alignCenter"><img src="/assets/images/posts/crawling-week6-715d2084bbe3.png" loading="lazy" width="533" height="221"></figure>
 
-<figure class="imagegridblock"><div class="image-container"><span data-url="/assets/images/posts/crawling-week6-18927ef3ff7a.png" data-phocus="/assets/images/posts/crawling-week6-18927ef3ff7a.png" data-origin-width="536" data-origin-height="226" data-is-animation="false" style="width: 49.0424%; margin-right: 10px;" data-widthpercent="49.62"><img src="/assets/images/posts/crawling-week6-18927ef3ff7a.png" loading="lazy" width="536" height="226"></span><span data-url="/assets/images/posts/crawling-week6-457ae1e9f8bc.png" data-phocus="/assets/images/posts/crawling-week6-457ae1e9f8bc.png" data-origin-width="537" data-origin-height="223" data-is-animation="false" style="width: 49.7948%;" data-widthpercent="50.38"><img src="/assets/images/posts/crawling-week6-457ae1e9f8bc.png" loading="lazy" width="537" height="223"></span></div><figcaption>A → B → D → E → C → F → G</figcaption></figure>
+<figure class="imageblock alignCenter"><img src="/assets/images/posts/crawling-week6-a229f18085f4.png" loading="lazy" width="538" height="224"></figure>
+
+<figure class="imageblock alignCenter"><img src="/assets/images/posts/crawling-week6-18f675c94c69.png" loading="lazy" width="533" height="220"></figure>
+
+<figure class="imageblock alignCenter"><img src="/assets/images/posts/crawling-week6-18927ef3ff7a.png" loading="lazy" width="536" height="226"></figure>
+
+<figure class="imageblock alignCenter"><img src="/assets/images/posts/crawling-week6-457ae1e9f8bc.png" loading="lazy" width="537" height="223"><figcaption>A → B → D → E → C → F → G</figcaption></figure>
 
 이 방식은 <strong>스택(Stack)</strong>으로 구현한다(재귀 함수로도 구현 가능). 스택은 나중에 들어간 것이 먼저 나오는 <strong>LIFO(Last In, First Out)</strong> 구조로, 방금 발견한 링크가 맨 위에 쌓이므로 크롤러는 계속 더 깊은 곳으로 들어간다.
 
