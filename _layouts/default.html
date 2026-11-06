@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/css/migration.css?v=20261106-folders">
   {% seo %}{% feed_meta %}
 </head>
-<body id="{% if page.layout == 'post' %}tt-body-page{% else %}tt-body-index{% endif %}" class="headerslogundisplayon headerbannerdisplayon listmorenumber listmorebuttonmobile use-menu-topnavnone-wrp">
+<body id="{% if page.layout == 'post' %}tt-body-page{% else %}tt-body-index{% endif %}" class="headerslogundisplayon headerbannerdisplayon listmorenumber listmorenumbermobile use-menu-topnavnone-wrp">
 <div id="wrap" class="wrap-right">
   <header class="header"><div class="inner-header topnavnone"><div class="area-align"><div class="area-gnb"><nav class="topnavnone"><a href="/">홈</a></nav></div><button class="button-menu" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="sidebar"><svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor"><path d="M0 0h20v2H0zm0 6h20v2H0zm0 6h20v2H0z"/></svg></button></div></div></header>
   {% unless page.layout == 'post' %}{% include hero.html %}{% endunless %}
