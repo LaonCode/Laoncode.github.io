@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const $ = s => document.querySelector(s);
-  const el = (tag, cls, text) => { const n = document.createElement(tag); if(cls)n.className=cls;if(text!=null)n.textContent=text;return n; };
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if(cls)n.className=cls;if(text!=null)n.textContent=text;window.preserveBlogEnglish?.(n);return n; };
   const link = (text,url,cls) => {const n=el('a',cls,text);n.href=url;return n;};
   const query = (key,value) => '/?'+new URLSearchParams({[key]:value});
   function theme(dark){if(dark)document.documentElement.dataset.theme='dark';else delete document.documentElement.dataset.theme;const img=$('.img-profile');if(img)img.src=dark?img.dataset.darkSrc:img.dataset.lightSrc;$('#theme-button')?.setAttribute('aria-label',dark?'라이트 모드 전환':'다크 모드 전환');try{localStorage.setItem('laoncode-theme',dark?'dark':'light');}catch(e){}}

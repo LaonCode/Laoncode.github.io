@@ -1,0 +1,16 @@
+#sidebar .language-menu{margin:0 0 24px;border:1px solid var(--border-dim);border-radius:12px;background:var(--bg-panel);color:var(--text-main);font-size:13px}
+#sidebar .language-menu summary{display:flex;align-items:center;gap:9px;min-height:46px;padding:0 14px;cursor:pointer;list-style:none;white-space:nowrap}
+#sidebar .language-menu summary::-webkit-details-marker{display:none}
+#sidebar .language-menu summary svg{flex-shrink:0;color:var(--neon-blue)}
+#sidebar .language-menu summary::after{content:'+';margin-left:auto;color:var(--neon-blue);font-size:18px}
+#sidebar .language-menu[open] summary::after{content:'−'}
+#sidebar .language-body{padding:12px 14px;border-top:1px solid var(--border-dim)}
+#sidebar .language-menu select{box-sizing:border-box;display:block;width:100%;max-width:100%;min-height:42px;padding:8px;border:1px solid var(--border-dim);border-radius:7px;background:var(--bg-panel);color:var(--text-main);font:inherit}
+#sidebar .language-menu :focus-visible{outline:2px solid var(--neon-blue);outline-offset:2px}
+#sidebar .language-menu p{margin:8px 0 0;font-size:10px;color:var(--text-dim);line-height:1.5}
+#sidebar .goog-te-gadget{color:var(--text-dim);font-size:10px}
+html[data-theme="dark"] .language-menu select{color-scheme:dark}
+@media(max-width:1060px){
+  .wrap-right .header .button-menu{top:calc(8px + var(--translation-offset,0px))}
+  .wrap-right .area-aside{top:var(--translation-offset,0px);height:calc(100dvh - var(--translation-offset,0px))}
+}
