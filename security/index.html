@@ -1,0 +1,38 @@
+---
+layout: default
+title: 보안 이슈 노트
+hide_hero: true
+permalink: /security/
+---
+
+<section class="area-common security-notes">
+  <header class="security-heading">
+    <h1>보안 이슈 노트</h1>
+    <p>X에서 발견한 보안 이슈를 날짜별로 기록합니다.</p>
+  </header>
+  <div class="security-filters">
+    <label>내용 검색<input id="issue-search" type="search" placeholder="키워드 또는 계정 검색"></label>
+    <label>날짜<input id="issue-date" type="date"></label>
+    <button id="issue-reset" type="button">전체 보기</button>
+  </div>
+  <p id="issue-status" role="status"></p>
+  <div id="issue-days">
+    {% assign issues = site.data.security_issues | sort: 'date' | reverse %}
+    {% assign days = issues | group_by: 'date' %}
+    {% for day in days %}
+    <section class="issue-day" data-date="{{ day.name | escape }}">
+      <h2><time datetime="{{ day.name | escape }}">{{ day.name | escape }}</time><span>{{ day.items.size }}건</span></h2>
+      <ul>
+      {% for issue in day.items %}
+        <li class="issue-note">
+          <p>{{ issue.summary | escape }}</p>
+          <a href="{{ issue.url | escape }}" target="_blank" rel="noopener noreferrer">{{ issue.url | escape }} <span aria-hidden="true">↗</span></a>
+        </li>
+      {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+  <p id="issue-empty" {% if issues.size > 0 %}hidden{% endif %}>아직 기록된 보안 이슈가 없습니다.</p>
+</section>
+<script src="/assets/js/security.js" defer></script>
