@@ -1,1 +1,7 @@
-[]
+[
+    {
+        "date":  "2026-11-13",
+        "url":  "https://x.com/watchtowrcyber/status/2120803577094439123",
+        "summary":  "최신 패치를 적용한 일부 N-central 서버에서도 원격 코드 실행(RCE)이 가능한 취약점을 노린 공격이 관찰됨."
+    }
+]
