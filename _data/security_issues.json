@@ -1,7 +1,17 @@
 [
     {
         "date":  "2026-11-13",
+        "url":  "https://x.com/binance/status/2120921979226329504",
+        "summary":  "대규모 해킹으로 영향을 받은 고객 자산의 보전을 완료하고, 보유 자산 증명을 위한 새로운 Proof of Reserves를 발표함."
+    },
+    {
+        "date":  "2026-11-13",
         "url":  "https://x.com/watchtowrcyber/status/2120803577094439123",
         "summary":  "최신 패치를 적용한 일부 N-central 서버에서도 원격 코드 실행(RCE)이 가능한 취약점을 노린 공격이 관찰됨."
+    },
+    {
+        "date":  "2026-11-13",
+        "url":  "https://x.com/ESETresearch/status/2120805423485702438",
+        "summary":  "보안 탐지를 우회하는 Cruciferra 악성코드 관련 공격 시도 70만 건 이상이 차단됐다고 발표함."
     }
 ]
