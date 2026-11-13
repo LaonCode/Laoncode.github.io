@@ -174,3 +174,5 @@ button,a{-webkit-tap-highlight-color:rgba(60,140,255,.12)}
 .category-toggle[aria-expanded="true"] .folder-closed{display:none}
 .category-toggle[aria-expanded="true"] .folder-open{display:inline}
 #sidebar .box-category .category-toggle:hover{background:rgba(60,140,255,.12)}
+#sidebar .category-folder-static{display:inline-flex;align-items:center;justify-content:center;width:16px;flex:0 0 16px;color:var(--neon-blue)}
+#sidebar .box-category .link_tit .category-folder-static{margin-right:8px}

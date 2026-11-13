@@ -4,6 +4,21 @@
   const status = document.getElementById('language-status');
   let requested = false;
   let loadTimeout;
+  const languageNames = {
+    '': 'Language / 언어 선택', ko: '한국어', en: 'English', ja: '日本語',
+    'zh-CN': '简体中文', 'zh-TW': '繁體中文', es: 'Español', fr: 'Français', de: 'Deutsch'
+  };
+  const widget = document.getElementById('google_translate_element');
+  function localizeLanguageNames() {
+    const options = widget.querySelectorAll('select option');
+    if (options.length < 2) return;
+    options.forEach(option => {
+      const label = languageNames[option.value];
+      if (label && option.textContent !== label) option.textContent = label;
+    });
+  }
+  // The provider rebuilds the list after switching back to the original language.
+  new MutationObserver(localizeLanguageNames).observe(widget, { childList: true, subtree: true, characterData: true });
   // Protect original English text before sending Korean content for translation.
   function preserveEnglish(root) {
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
