@@ -1,8 +1,33 @@
 [
     {
-        "date":  "2026-11-13",
-        "url":  "https://x.com/binance/status/2120921979226329504",
-        "summary":  "대규모 해킹으로 영향을 받은 고객 자산의 보전을 완료하고, 보유 자산 증명을 위한 새로운 Proof of Reserves를 발표함."
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121153267644436507",
+        "summary":  "Check Point 방화벽 취약점을 악용해 root 권한을 탈취하고 VMware ESXi까지 침투한 공격 사례 공개."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121264146390122799",
+        "summary":  "Mior·Skyfall 연구를 통해 AMD SEV-SNP 기반 기밀 가상머신의 정보 유출 및 메모리 보호 우회 가능성 입증."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121287163065319838",
+        "summary":  "PostgreSQL이 약 22년 된 Type Confusion 취약점(CVE-2026-6460)을 포함한 보안 문제 52개를 수정하는 업데이트 공개."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
+        "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/GoogleDeepMind/status/2120484246401777737",
+        "summary":  "AlphaProof Code로 Signal 암호화 구현의 핵심 보안 속성을 수학적으로 검증하는 AI 기반 형식 검증 기술 발표."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121200667809436138",
+        "summary":  "SilentAir가 아시아 통신망의 SS7·Diameter 프로토콜을 악용해 SMS 인증코드와 통신정보를 가로챈 정황 공개."
     },
     {
         "date":  "2026-11-13",
@@ -13,5 +38,10 @@
         "date":  "2026-11-13",
         "url":  "https://x.com/ESETresearch/status/2120805423485702438",
         "summary":  "보안 탐지를 우회하는 Cruciferra 악성코드 관련 공격 시도 70만 건 이상이 차단됐다고 발표함."
+    },
+    {
+        "date":  "2026-11-13",
+        "url":  "https://x.com/binance/status/2120921979226329504",
+        "summary":  "대규모 해킹으로 영향을 받은 고객 자산의 보전을 완료하고, 보유 자산 증명을 위한 새로운 Proof of Reserves를 발표함."
     }
 ]
