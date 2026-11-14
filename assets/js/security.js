@@ -4,6 +4,17 @@
   const days = Array.from(document.querySelectorAll('.issue-day'));
   const empty = document.getElementById('issue-empty');
   const total = document.querySelectorAll('.issue-note').length;
+  document.querySelectorAll('.issue-published time').forEach(time => {
+    const published = new Date(time.dateTime);
+    if (!Number.isNaN(published.getTime())) {
+      time.textContent = new Intl.DateTimeFormat('ko-KR', {timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false}).format(published) + ' (KST)';
+    }
+  });
+  document.querySelectorAll('.issue-media img').forEach(img => {
+    const fallback = () => { img.hidden = true; img.previousElementSibling.hidden = false; };
+    img.addEventListener('error', fallback);
+    if (img.complete && !img.naturalWidth) fallback();
+  });
 
   function filterIssues() {
     const query = search.value.trim().toLocaleLowerCase();
@@ -12,7 +23,7 @@
       let dayCount = 0;
       day.querySelectorAll('.issue-note').forEach(note => {
         const matches = (!date.value || day.dataset.date === date.value)
-          && note.textContent.toLocaleLowerCase().includes(query);
+          && (note.textContent + ' ' + note.dataset.url).toLocaleLowerCase().includes(query);
         note.hidden = !matches;
         if (matches) dayCount += 1;
       });
