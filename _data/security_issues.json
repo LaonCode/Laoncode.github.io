@@ -1,5 +1,15 @@
 [
     {
+        "date":  "2026-11-16",
+        "url":  "https://x.com/ianlivingstone/status/2121705792114208806",
+        "summary":  "AI 에이전트에게 장기간 유효한 API 키를 제공하는 대신, 작업별로 권한이 제한되고 짧은 시간만 유효한 인증정보를 제공해야 한다고 주장"
+    },
+    {
+        "date":  "2026-11-16",
+        "url":  "https://x.com/cursor_ai/status/2121411147714970092",
+        "summary":  "외부 AI 인프라 업체에서 유출된 API 키가 개발 기록과 내부 시스템 접근으로 이어졌고, 결국 악성 Claude Code 확장 프로그램 배포에 악용됐다는 조사 결과를 공개"
+    },
+    {
         "date":  "2026-11-15",
         "url":  "https://x.com/FBICyberBranch/status/2121317398305186287",
         "summary":  "공격자들이 LLM 기반 자율형 침투 테스트 프레임워크 ARTEX를 악용해 정찰부터 정보 탈취까지 자동화하고 있음."
