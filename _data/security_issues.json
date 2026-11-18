@@ -1,13 +1,13 @@
 [
     {
-        "date":  "2026-11-17",
-        "url":  "https://x.com/PrevidianCyber/status/2120479799688757480",
-        "summary":  "공격자가 MLflow의 취약한 API를 이용해 Python 코드를 실행하고 XMRig 채굴기를 설치하려는 공격이 관찰됨"
+        "date":  "2026-11-18",
+        "url":  "https://x.com/troyhunt/status/2122466658065527202",
+        "summary":  "많은 웹사이트 운영자가 자신의 방문자에게 악성 코드가 전달됐다는 사실조차 알기 어려우며, 피해 이용자에게 어떻게 알릴지도 중요한 문제라고 강조함."
     },
     {
-        "date":  "2026-11-17",
-        "url":  "https://x.com/AlonPluda/status/2122344413951111663",
-        "summary":  "사이버 방어 전용 AI 모델을 개발하는 Corma가 기업가치 10억 달러 평가와 함께 1억 2,500만 달러 규모의 시리즈 A 투자를 유치했다고 발표함."
+        "date":  "2026-11-18",
+        "url":  "https://x.com/Scott_Helme/status/2122680971539419584",
+        "summary":  "운영 서버에 배포하는 코드는 검토하고 모니터링하면서, 방문자 브라우저에서 실행되는 제3자 코드는 사실상 무검증으로 허용하는 관행을 바꿔야 한다고 지적함."
     },
     {
         "date":  "2026-11-17",
@@ -16,23 +16,33 @@
     },
     {
         "date":  "2026-11-17",
-        "url":  "https://x.com/willzero/status/2120210882466877745",
-        "summary":  "MCP 서버의 리다이렉션을 통해 OAuth 토큰이 다른 호스트로 전달될 수 있는 문제와 Bash 명령의 샌드박스 우회 문제가 수정됨"
-    },
-    {
-        "date":  "2026-11-17",
         "url":  "https://x.com/OpenAI/status/2122359930628063248",
         "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
     },
     {
-        "date":  "2026-11-16",
-        "url":  "https://x.com/ianlivingstone/status/2121705792114208806",
-        "summary":  "AI 에이전트에게 장기간 유효한 API 키를 제공하는 대신, 작업별로 권한이 제한되고 짧은 시간만 유효한 인증정보를 제공해야 한다고 주장"
+        "date":  "2026-11-17",
+        "url":  "https://x.com/AlonPluda/status/2122344413951111663",
+        "summary":  "사이버 방어 전용 AI 모델을 개발하는 Corma가 기업가치 10억 달러 평가와 함께 1억 2,500만 달러 규모의 시리즈 A 투자를 유치했다고 발표함."
+    },
+    {
+        "date":  "2026-11-17",
+        "url":  "https://x.com/PrevidianCyber/status/2120479799688757480",
+        "summary":  "공격자가 MLflow의 취약한 API를 이용해 Python 코드를 실행하고 XMRig 채굴기를 설치하려는 공격이 관찰됨"
+    },
+    {
+        "date":  "2026-11-17",
+        "url":  "https://x.com/willzero/status/2120210882466877745",
+        "summary":  "MCP 서버의 리다이렉션을 통해 OAuth 토큰이 다른 호스트로 전달될 수 있는 문제와 Bash 명령의 샌드박스 우회 문제가 수정됨"
     },
     {
         "date":  "2026-11-16",
         "url":  "https://x.com/cursor_ai/status/2121411147714970092",
         "summary":  "외부 AI 인프라 업체에서 유출된 API 키가 개발 기록과 내부 시스템 접근으로 이어졌고, 결국 악성 Claude Code 확장 프로그램 배포에 악용됐다는 조사 결과를 공개"
+    },
+    {
+        "date":  "2026-11-16",
+        "url":  "https://x.com/ianlivingstone/status/2121705792114208806",
+        "summary":  "AI 에이전트에게 장기간 유효한 API 키를 제공하는 대신, 작업별로 권한이 제한되고 짧은 시간만 유효한 인증정보를 제공해야 한다고 주장"
     },
     {
         "date":  "2026-11-15",
@@ -43,16 +53,6 @@
         "date":  "2026-11-15",
         "url":  "https://x.com/FBICyberBranch/status/2121317398305186287",
         "summary":  "공격자들이 LLM 기반 자율형 침투 테스트 프레임워크 ARTEX를 악용해 정찰부터 정보 탈취까지 자동화하고 있음."
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/TheHackersNews/status/2121264146390122799",
-        "summary":  "Mior·Skyfall 연구를 통해 AMD SEV-SNP 기반 기밀 가상머신의 정보 유출 및 메모리 보호 우회 가능성 입증."
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
-        "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
     },
     {
         "date":  "2026-11-14",
@@ -73,6 +73,16 @@
         "date":  "2026-11-14",
         "url":  "https://x.com/TheHackersNews/status/2121287163065319838",
         "summary":  "PostgreSQL이 약 22년 된 Type Confusion 취약점(CVE-2026-6460)을 포함한 보안 문제 52개를 수정하는 업데이트 공개."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121264146390122799",
+        "summary":  "Mior·Skyfall 연구를 통해 AMD SEV-SNP 기반 기밀 가상머신의 정보 유출 및 메모리 보호 우회 가능성 입증."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
+        "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
     },
     {
         "date":  "2026-11-13",
