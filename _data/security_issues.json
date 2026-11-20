@@ -1,5 +1,25 @@
 [
     {
+        "date":  "2026-11-20",
+        "url":  "https://x.com/vite_js/status/2122949427497165033",
+        "summary":  "Vite 공식 계정은 외부 네트워크에 노출된 개발 서버에서 HTTP 요청만으로 임의 코드 실행이 가능했던 취약점의 수정 버전을 다시 안내함."
+    },
+    {
+        "date":  "2026-11-20",
+        "url":  "https://x.com/xint_official/status/2123073835742486657",
+        "summary":  "Xint는 NGINX의 취약점 다섯 개를 공개하면서 AI 기반 분석 시스템이 그중 네 개를 별도의 사람 지시 없이 발견했다고 밝혔음."
+    },
+    {
+        "date":  "2026-11-19",
+        "url":  "https://x.com/KevTheHermit/status/2122829165925998824",
+        "summary":  "Java4Shell의 작동 가능한 익스플로잇 PoC를 개발했다고 밝히면서도, 모든 Java 시스템에 통하는 범용 공격은 아니라고 설명함."
+    },
+    {
+        "date":  "2026-11-19",
+        "url":  "https://x.com/calif_io/status/2122724367654334810",
+        "summary":  "취약점 정보가 패치 전에 유출됐다고 밝히며, Oracle의 보안 패치 공개 이후 기술 세부사항을 공개하겠다고 예고함."
+    },
+    {
         "date":  "2026-11-18",
         "url":  "https://x.com/troyhunt/status/2122466658065527202",
         "summary":  "많은 웹사이트 운영자가 자신의 방문자에게 악성 코드가 전달됐다는 사실조차 알기 어려우며, 피해 이용자에게 어떻게 알릴지도 중요한 문제라고 강조함."
@@ -11,18 +31,8 @@
     },
     {
         "date":  "2026-11-17",
-        "url":  "https://x.com/gmazza1989/status/2120203448243331480",
-        "summary":  "MCP 서버가 기본 설정에서 인증 없이 외부 네트워크에 노출될 수 있으며, 셸 실행 기능까지 활성화하면 원격 명령 실행으로 이어질 수 있음."
-    },
-    {
-        "date":  "2026-11-17",
-        "url":  "https://x.com/OpenAI/status/2122359930628063248",
-        "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
-    },
-    {
-        "date":  "2026-11-17",
-        "url":  "https://x.com/AlonPluda/status/2122344413951111663",
-        "summary":  "사이버 방어 전용 AI 모델을 개발하는 Corma가 기업가치 10억 달러 평가와 함께 1억 2,500만 달러 규모의 시리즈 A 투자를 유치했다고 발표함."
+        "url":  "https://x.com/willzero/status/2120210882466877745",
+        "summary":  "MCP 서버의 리다이렉션을 통해 OAuth 토큰이 다른 호스트로 전달될 수 있는 문제와 Bash 명령의 샌드박스 우회 문제가 수정됨"
     },
     {
         "date":  "2026-11-17",
@@ -31,8 +41,18 @@
     },
     {
         "date":  "2026-11-17",
-        "url":  "https://x.com/willzero/status/2120210882466877745",
-        "summary":  "MCP 서버의 리다이렉션을 통해 OAuth 토큰이 다른 호스트로 전달될 수 있는 문제와 Bash 명령의 샌드박스 우회 문제가 수정됨"
+        "url":  "https://x.com/AlonPluda/status/2122344413951111663",
+        "summary":  "사이버 방어 전용 AI 모델을 개발하는 Corma가 기업가치 10억 달러 평가와 함께 1억 2,500만 달러 규모의 시리즈 A 투자를 유치했다고 발표함."
+    },
+    {
+        "date":  "2026-11-17",
+        "url":  "https://x.com/gmazza1989/status/2120203448243331480",
+        "summary":  "MCP 서버가 기본 설정에서 인증 없이 외부 네트워크에 노출될 수 있으며, 셸 실행 기능까지 활성화하면 원격 명령 실행으로 이어질 수 있음."
+    },
+    {
+        "date":  "2026-11-17",
+        "url":  "https://x.com/OpenAI/status/2122359930628063248",
+        "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
     },
     {
         "date":  "2026-11-16",
@@ -46,28 +66,13 @@
     },
     {
         "date":  "2026-11-15",
-        "url":  "https://x.com/MsftSecIntel/status/2121491564161581148",
-        "summary":  "실제 Microsoft 365 장애를 사칭해 보류된 메일이 삭제된다고 속이고 계정 복구 링크 클릭을 유도하는 피싱이 발견됨"
-    },
-    {
-        "date":  "2026-11-15",
         "url":  "https://x.com/FBICyberBranch/status/2121317398305186287",
         "summary":  "공격자들이 LLM 기반 자율형 침투 테스트 프레임워크 ARTEX를 악용해 정찰부터 정보 탈취까지 자동화하고 있음."
     },
     {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/TheHackersNews/status/2121200667809436138",
-        "summary":  "SilentAir가 아시아 통신망의 SS7·Diameter 프로토콜을 악용해 SMS 인증코드와 통신정보를 가로챈 정황 공개."
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/TheHackersNews/status/2121153267644436507",
-        "summary":  "Check Point 방화벽 취약점을 악용해 root 권한을 탈취하고 VMware ESXi까지 침투한 공격 사례 공개."
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/GoogleDeepMind/status/2120484246401777737",
-        "summary":  "AlphaProof Code로 Signal 암호화 구현의 핵심 보안 속성을 수학적으로 검증하는 AI 기반 형식 검증 기술 발표."
+        "date":  "2026-11-15",
+        "url":  "https://x.com/MsftSecIntel/status/2121491564161581148",
+        "summary":  "실제 Microsoft 365 장애를 사칭해 보류된 메일이 삭제된다고 속이고 계정 복구 링크 클릭을 유도하는 피싱이 발견됨"
     },
     {
         "date":  "2026-11-14",
@@ -83,6 +88,21 @@
         "date":  "2026-11-14",
         "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
         "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121200667809436138",
+        "summary":  "SilentAir가 아시아 통신망의 SS7·Diameter 프로토콜을 악용해 SMS 인증코드와 통신정보를 가로챈 정황 공개."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121153267644436507",
+        "summary":  "Check Point 방화벽 취약점을 악용해 root 권한을 탈취하고 VMware ESXi까지 침투한 공격 사례 공개."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/GoogleDeepMind/status/2120484246401777737",
+        "summary":  "AlphaProof Code로 Signal 암호화 구현의 핵심 보안 속성을 수학적으로 검증하는 AI 기반 형식 검증 기술 발표."
     },
     {
         "date":  "2026-11-13",
