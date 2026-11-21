@@ -1,5 +1,10 @@
 [
     {
+        "date":  "2026-11-21",
+        "url":  "https://x.com/calif_io/status/2122799880221687837",
+        "summary":  "Java의 Base64 디코더에서 발생한 메모리 손상 취약점이 특정 환경에서 원격 코드 실행으로 이어질 수 있음."
+    },
+    {
         "date":  "2026-11-20",
         "url":  "https://x.com/vite_js/status/2122949427497165033",
         "summary":  "Vite 공식 계정은 외부 네트워크에 노출된 개발 서버에서 HTTP 요청만으로 임의 코드 실행이 가능했던 취약점의 수정 버전을 다시 안내함."
@@ -31,8 +36,8 @@
     },
     {
         "date":  "2026-11-17",
-        "url":  "https://x.com/willzero/status/2120210882466877745",
-        "summary":  "MCP 서버의 리다이렉션을 통해 OAuth 토큰이 다른 호스트로 전달될 수 있는 문제와 Bash 명령의 샌드박스 우회 문제가 수정됨"
+        "url":  "https://x.com/OpenAI/status/2122359930628063248",
+        "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
     },
     {
         "date":  "2026-11-17",
@@ -41,28 +46,28 @@
     },
     {
         "date":  "2026-11-17",
-        "url":  "https://x.com/AlonPluda/status/2122344413951111663",
-        "summary":  "사이버 방어 전용 AI 모델을 개발하는 Corma가 기업가치 10억 달러 평가와 함께 1억 2,500만 달러 규모의 시리즈 A 투자를 유치했다고 발표함."
-    },
-    {
-        "date":  "2026-11-17",
         "url":  "https://x.com/gmazza1989/status/2120203448243331480",
         "summary":  "MCP 서버가 기본 설정에서 인증 없이 외부 네트워크에 노출될 수 있으며, 셸 실행 기능까지 활성화하면 원격 명령 실행으로 이어질 수 있음."
     },
     {
         "date":  "2026-11-17",
-        "url":  "https://x.com/OpenAI/status/2122359930628063248",
-        "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
+        "url":  "https://x.com/willzero/status/2120210882466877745",
+        "summary":  "MCP 서버의 리다이렉션을 통해 OAuth 토큰이 다른 호스트로 전달될 수 있는 문제와 Bash 명령의 샌드박스 우회 문제가 수정됨"
     },
     {
-        "date":  "2026-11-16",
-        "url":  "https://x.com/cursor_ai/status/2121411147714970092",
-        "summary":  "외부 AI 인프라 업체에서 유출된 API 키가 개발 기록과 내부 시스템 접근으로 이어졌고, 결국 악성 Claude Code 확장 프로그램 배포에 악용됐다는 조사 결과를 공개"
+        "date":  "2026-11-17",
+        "url":  "https://x.com/AlonPluda/status/2122344413951111663",
+        "summary":  "사이버 방어 전용 AI 모델을 개발하는 Corma가 기업가치 10억 달러 평가와 함께 1억 2,500만 달러 규모의 시리즈 A 투자를 유치했다고 발표함."
     },
     {
         "date":  "2026-11-16",
         "url":  "https://x.com/ianlivingstone/status/2121705792114208806",
         "summary":  "AI 에이전트에게 장기간 유효한 API 키를 제공하는 대신, 작업별로 권한이 제한되고 짧은 시간만 유효한 인증정보를 제공해야 한다고 주장"
+    },
+    {
+        "date":  "2026-11-16",
+        "url":  "https://x.com/cursor_ai/status/2121411147714970092",
+        "summary":  "외부 AI 인프라 업체에서 유출된 API 키가 개발 기록과 내부 시스템 접근으로 이어졌고, 결국 악성 Claude Code 확장 프로그램 배포에 악용됐다는 조사 결과를 공개"
     },
     {
         "date":  "2026-11-15",
@@ -73,21 +78,6 @@
         "date":  "2026-11-15",
         "url":  "https://x.com/MsftSecIntel/status/2121491564161581148",
         "summary":  "실제 Microsoft 365 장애를 사칭해 보류된 메일이 삭제된다고 속이고 계정 복구 링크 클릭을 유도하는 피싱이 발견됨"
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/TheHackersNews/status/2121287163065319838",
-        "summary":  "PostgreSQL이 약 22년 된 Type Confusion 취약점(CVE-2026-6460)을 포함한 보안 문제 52개를 수정하는 업데이트 공개."
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/TheHackersNews/status/2121264146390122799",
-        "summary":  "Mior·Skyfall 연구를 통해 AMD SEV-SNP 기반 기밀 가상머신의 정보 유출 및 메모리 보호 우회 가능성 입증."
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
-        "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
     },
     {
         "date":  "2026-11-14",
@@ -105,18 +95,33 @@
         "summary":  "AlphaProof Code로 Signal 암호화 구현의 핵심 보안 속성을 수학적으로 검증하는 AI 기반 형식 검증 기술 발표."
     },
     {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121287163065319838",
+        "summary":  "PostgreSQL이 약 22년 된 Type Confusion 취약점(CVE-2026-6460)을 포함한 보안 문제 52개를 수정하는 업데이트 공개."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121264146390122799",
+        "summary":  "Mior·Skyfall 연구를 통해 AMD SEV-SNP 기반 기밀 가상머신의 정보 유출 및 메모리 보호 우회 가능성 입증."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
+        "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
+    },
+    {
         "date":  "2026-11-13",
         "url":  "https://x.com/watchtowrcyber/status/2120803577094439123",
         "summary":  "최신 패치를 적용한 일부 N-central 서버에서도 원격 코드 실행(RCE)이 가능한 취약점을 노린 공격이 관찰됨."
     },
     {
         "date":  "2026-11-13",
-        "url":  "https://x.com/binance/status/2120921979226329504",
-        "summary":  "대규모 해킹으로 영향을 받은 고객 자산의 보전을 완료하고, 보유 자산 증명을 위한 새로운 Proof of Reserves를 발표함."
+        "url":  "https://x.com/ESETresearch/status/2120805423485702438",
+        "summary":  "보안 탐지를 우회하는 Cruciferra 악성코드 관련 공격 시도 70만 건 이상이 차단됐다고 발표함."
     },
     {
         "date":  "2026-11-13",
-        "url":  "https://x.com/ESETresearch/status/2120805423485702438",
-        "summary":  "보안 탐지를 우회하는 Cruciferra 악성코드 관련 공격 시도 70만 건 이상이 차단됐다고 발표함."
+        "url":  "https://x.com/binance/status/2120921979226329504",
+        "summary":  "대규모 해킹으로 영향을 받은 고객 자산의 보전을 완료하고, 보유 자산 증명을 위한 새로운 Proof of Reserves를 발표함."
     }
 ]
