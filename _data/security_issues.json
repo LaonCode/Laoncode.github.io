@@ -1,5 +1,15 @@
 [
     {
+        "date":  "2026-11-22",
+        "url":  "https://x.com/coderabbitai/status/2121272144206135487",
+        "summary":  "AI 기반 코드 분석으로 대규모 오픈소스 프로젝트의 보안 취약점을 탐색한 사례"
+    },
+    {
+        "date":  "2026-11-22",
+        "url":  "https://x.com/OpenAI/status/2118119451401048497",
+        "summary":  "AI가 취약점 탐지부터 검증, 패치 생성까지 자동화하는 단계에 도달했다는 사례"
+    },
+    {
         "date":  "2026-11-21",
         "url":  "https://x.com/calif_io/status/2122799880221687837",
         "summary":  "Java의 Base64 디코더에서 발생한 메모리 손상 취약점이 특정 환경에서 원격 코드 실행으로 이어질 수 있음."
@@ -36,11 +46,6 @@
     },
     {
         "date":  "2026-11-17",
-        "url":  "https://x.com/OpenAI/status/2122359930628063248",
-        "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
-    },
-    {
-        "date":  "2026-11-17",
         "url":  "https://x.com/PrevidianCyber/status/2120479799688757480",
         "summary":  "공격자가 MLflow의 취약한 API를 이용해 Python 코드를 실행하고 XMRig 채굴기를 설치하려는 공격이 관찰됨"
     },
@@ -58,6 +63,11 @@
         "date":  "2026-11-17",
         "url":  "https://x.com/AlonPluda/status/2122344413951111663",
         "summary":  "사이버 방어 전용 AI 모델을 개발하는 Corma가 기업가치 10억 달러 평가와 함께 1억 2,500만 달러 규모의 시리즈 A 투자를 유치했다고 발표함."
+    },
+    {
+        "date":  "2026-11-17",
+        "url":  "https://x.com/OpenAI/status/2122359930628063248",
+        "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
     },
     {
         "date":  "2026-11-16",
