@@ -1,5 +1,15 @@
 [
     {
+        "date":  "2026-11-23",
+        "url":  "https://x.com/Polymarket/status/2122465440672952809",
+        "summary":  "AI 에이전트가 패치 전후의 코드를 비교해 취약점을 찾아내고 공격 코드를 실행하는 자동화 공격 사례가 관찰됨"
+    },
+    {
+        "date":  "2026-11-23",
+        "url":  "https://x.com/jpmorgan/status/2123408240104853510",
+        "summary":  "금융기관의 내부 시스템뿐 아니라 외부 데이터 처리업체를 통한 정보 유출도 고객을 겨냥한 피싱 위험으로 이어질 수 있음"
+    },
+    {
         "date":  "2026-11-22",
         "url":  "https://x.com/coderabbitai/status/2121272144206135487",
         "summary":  "AI 기반 코드 분석으로 대규모 오픈소스 프로젝트의 보안 취약점을 탐색한 사례"
@@ -46,11 +56,6 @@
     },
     {
         "date":  "2026-11-17",
-        "url":  "https://x.com/PrevidianCyber/status/2120479799688757480",
-        "summary":  "공격자가 MLflow의 취약한 API를 이용해 Python 코드를 실행하고 XMRig 채굴기를 설치하려는 공격이 관찰됨"
-    },
-    {
-        "date":  "2026-11-17",
         "url":  "https://x.com/gmazza1989/status/2120203448243331480",
         "summary":  "MCP 서버가 기본 설정에서 인증 없이 외부 네트워크에 노출될 수 있으며, 셸 실행 기능까지 활성화하면 원격 명령 실행으로 이어질 수 있음."
     },
@@ -68,6 +73,11 @@
         "date":  "2026-11-17",
         "url":  "https://x.com/OpenAI/status/2122359930628063248",
         "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
+    },
+    {
+        "date":  "2026-11-17",
+        "url":  "https://x.com/PrevidianCyber/status/2120479799688757480",
+        "summary":  "공격자가 MLflow의 취약한 API를 이용해 Python 코드를 실행하고 XMRig 채굴기를 설치하려는 공격이 관찰됨"
     },
     {
         "date":  "2026-11-16",
@@ -91,16 +101,6 @@
     },
     {
         "date":  "2026-11-14",
-        "url":  "https://x.com/TheHackersNews/status/2121200667809436138",
-        "summary":  "SilentAir가 아시아 통신망의 SS7·Diameter 프로토콜을 악용해 SMS 인증코드와 통신정보를 가로챈 정황 공개."
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/TheHackersNews/status/2121153267644436507",
-        "summary":  "Check Point 방화벽 취약점을 악용해 root 권한을 탈취하고 VMware ESXi까지 침투한 공격 사례 공개."
-    },
-    {
-        "date":  "2026-11-14",
         "url":  "https://x.com/GoogleDeepMind/status/2120484246401777737",
         "summary":  "AlphaProof Code로 Signal 암호화 구현의 핵심 보안 속성을 수학적으로 검증하는 AI 기반 형식 검증 기술 발표."
     },
@@ -111,13 +111,23 @@
     },
     {
         "date":  "2026-11-14",
+        "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
+        "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
+    },
+    {
+        "date":  "2026-11-14",
         "url":  "https://x.com/TheHackersNews/status/2121264146390122799",
         "summary":  "Mior·Skyfall 연구를 통해 AMD SEV-SNP 기반 기밀 가상머신의 정보 유출 및 메모리 보호 우회 가능성 입증."
     },
     {
         "date":  "2026-11-14",
-        "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
-        "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
+        "url":  "https://x.com/TheHackersNews/status/2121153267644436507",
+        "summary":  "Check Point 방화벽 취약점을 악용해 root 권한을 탈취하고 VMware ESXi까지 침투한 공격 사례 공개."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121200667809436138",
+        "summary":  "SilentAir가 아시아 통신망의 SS7·Diameter 프로토콜을 악용해 SMS 인증코드와 통신정보를 가로챈 정황 공개."
     },
     {
         "date":  "2026-11-13",
