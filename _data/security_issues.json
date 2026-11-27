@@ -1,5 +1,10 @@
 [
     {
+        "date":  "2026-11-27",
+        "url":  "https://x.com/cursor_ai/status/2116074289053175808",
+        "summary":  "Cursor 마켓플레이스에서 변조된 Claude Code VS Code 확장 프로그램이 배포돼 최대 5,000명에게 영향을 줄 수 있었다고 공식 발표"
+    },
+    {
         "date":  "2026-11-26",
         "url":  "https://x.com/OpenAI/status/2120202353907486826",
         "summary":  "OpenAI는 자사 시스템을 방어하며 발견·해결한 취약점과 경험을 보안팀이 활용할 수 있는 도구와 방어 절차로 발전시키겠다고 밝힘."
@@ -26,13 +31,13 @@
     },
     {
         "date":  "2026-11-22",
-        "url":  "https://x.com/coderabbitai/status/2121272144206135487",
-        "summary":  "AI 기반 코드 분석으로 대규모 오픈소스 프로젝트의 보안 취약점을 탐색한 사례"
+        "url":  "https://x.com/OpenAI/status/2118119451401048497",
+        "summary":  "AI가 취약점 탐지부터 검증, 패치 생성까지 자동화하는 단계에 도달했다는 사례"
     },
     {
         "date":  "2026-11-22",
-        "url":  "https://x.com/OpenAI/status/2118119451401048497",
-        "summary":  "AI가 취약점 탐지부터 검증, 패치 생성까지 자동화하는 단계에 도달했다는 사례"
+        "url":  "https://x.com/coderabbitai/status/2121272144206135487",
+        "summary":  "AI 기반 코드 분석으로 대규모 오픈소스 프로젝트의 보안 취약점을 탐색한 사례"
     },
     {
         "date":  "2026-11-21",
@@ -41,13 +46,13 @@
     },
     {
         "date":  "2026-11-20",
-        "url":  "https://x.com/vite_js/status/2122949427497165033",
-        "summary":  "Vite 공식 계정은 외부 네트워크에 노출된 개발 서버에서 HTTP 요청만으로 임의 코드 실행이 가능했던 취약점의 수정 버전을 다시 안내함."
+        "url":  "https://x.com/xint_official/status/2123073835742486657",
+        "summary":  "Xint는 NGINX의 취약점 다섯 개를 공개하면서 AI 기반 분석 시스템이 그중 네 개를 별도의 사람 지시 없이 발견했다고 밝혔음."
     },
     {
         "date":  "2026-11-20",
-        "url":  "https://x.com/xint_official/status/2123073835742486657",
-        "summary":  "Xint는 NGINX의 취약점 다섯 개를 공개하면서 AI 기반 분석 시스템이 그중 네 개를 별도의 사람 지시 없이 발견했다고 밝혔음."
+        "url":  "https://x.com/vite_js/status/2122949427497165033",
+        "summary":  "Vite 공식 계정은 외부 네트워크에 노출된 개발 서버에서 HTTP 요청만으로 임의 코드 실행이 가능했던 취약점의 수정 버전을 다시 안내함."
     },
     {
         "date":  "2026-11-19",
@@ -61,13 +66,28 @@
     },
     {
         "date":  "2026-11-18",
+        "url":  "https://x.com/troyhunt/status/2122466658065527202",
+        "summary":  "많은 웹사이트 운영자가 자신의 방문자에게 악성 코드가 전달됐다는 사실조차 알기 어려우며, 피해 이용자에게 어떻게 알릴지도 중요한 문제라고 강조함."
+    },
+    {
+        "date":  "2026-11-18",
         "url":  "https://x.com/Scott_Helme/status/2122680971539419584",
         "summary":  "운영 서버에 배포하는 코드는 검토하고 모니터링하면서, 방문자 브라우저에서 실행되는 제3자 코드는 사실상 무검증으로 허용하는 관행을 바꿔야 한다고 지적함."
     },
     {
-        "date":  "2026-11-18",
-        "url":  "https://x.com/troyhunt/status/2122466658065527202",
-        "summary":  "많은 웹사이트 운영자가 자신의 방문자에게 악성 코드가 전달됐다는 사실조차 알기 어려우며, 피해 이용자에게 어떻게 알릴지도 중요한 문제라고 강조함."
+        "date":  "2026-11-17",
+        "url":  "https://x.com/gmazza1989/status/2120203448243331480",
+        "summary":  "MCP 서버가 기본 설정에서 인증 없이 외부 네트워크에 노출될 수 있으며, 셸 실행 기능까지 활성화하면 원격 명령 실행으로 이어질 수 있음."
+    },
+    {
+        "date":  "2026-11-17",
+        "url":  "https://x.com/OpenAI/status/2122359930628063248",
+        "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
+    },
+    {
+        "date":  "2026-11-17",
+        "url":  "https://x.com/AlonPluda/status/2122344413951111663",
+        "summary":  "사이버 방어 전용 AI 모델을 개발하는 Corma가 기업가치 10억 달러 평가와 함께 1억 2,500만 달러 규모의 시리즈 A 투자를 유치했다고 발표함."
     },
     {
         "date":  "2026-11-17",
@@ -78,21 +98,6 @@
         "date":  "2026-11-17",
         "url":  "https://x.com/willzero/status/2120210882466877745",
         "summary":  "MCP 서버의 리다이렉션을 통해 OAuth 토큰이 다른 호스트로 전달될 수 있는 문제와 Bash 명령의 샌드박스 우회 문제가 수정됨"
-    },
-    {
-        "date":  "2026-11-17",
-        "url":  "https://x.com/gmazza1989/status/2120203448243331480",
-        "summary":  "MCP 서버가 기본 설정에서 인증 없이 외부 네트워크에 노출될 수 있으며, 셸 실행 기능까지 활성화하면 원격 명령 실행으로 이어질 수 있음."
-    },
-    {
-        "date":  "2026-11-17",
-        "url":  "https://x.com/AlonPluda/status/2122344413951111663",
-        "summary":  "사이버 방어 전용 AI 모델을 개발하는 Corma가 기업가치 10억 달러 평가와 함께 1억 2,500만 달러 규모의 시리즈 A 투자를 유치했다고 발표함."
-    },
-    {
-        "date":  "2026-11-17",
-        "url":  "https://x.com/OpenAI/status/2122359930628063248",
-        "summary":  "OpenAI가 Apollo Research, METR, Transluce, Goodfire에 내부 모델과 시스템에 대한 접근을 제공해 모델의 정렬과 안전장치를 독립적으로 평가하기 시작함."
     },
     {
         "date":  "2026-11-16",
@@ -116,6 +121,21 @@
     },
     {
         "date":  "2026-11-14",
+        "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
+        "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121287163065319838",
+        "summary":  "PostgreSQL이 약 22년 된 Type Confusion 취약점(CVE-2026-6460)을 포함한 보안 문제 52개를 수정하는 업데이트 공개."
+    },
+    {
+        "date":  "2026-11-14",
+        "url":  "https://x.com/TheHackersNews/status/2121200667809436138",
+        "summary":  "SilentAir가 아시아 통신망의 SS7·Diameter 프로토콜을 악용해 SMS 인증코드와 통신정보를 가로챈 정황 공개."
+    },
+    {
+        "date":  "2026-11-14",
         "url":  "https://x.com/GoogleDeepMind/status/2120484246401777737",
         "summary":  "AlphaProof Code로 Signal 암호화 구현의 핵심 보안 속성을 수학적으로 검증하는 AI 기반 형식 검증 기술 발표."
     },
@@ -126,23 +146,8 @@
     },
     {
         "date":  "2026-11-14",
-        "url":  "https://x.com/TheHackersNews/status/2121287163065319838",
-        "summary":  "PostgreSQL이 약 22년 된 Type Confusion 취약점(CVE-2026-6460)을 포함한 보안 문제 52개를 수정하는 업데이트 공개."
-    },
-    {
-        "date":  "2026-11-14",
         "url":  "https://x.com/TheHackersNews/status/2121264146390122799",
         "summary":  "Mior·Skyfall 연구를 통해 AMD SEV-SNP 기반 기밀 가상머신의 정보 유출 및 메모리 보호 우회 가능성 입증."
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/AikidoSecurity/status/2120720220629180540",
-        "summary":  "탈취된 GitHub 계정으로 6만 개 이상 저장소를 노린 악성 GitHub Actions 캠페인 발견, CI/CD 비밀정보 유출 위험 경고."
-    },
-    {
-        "date":  "2026-11-14",
-        "url":  "https://x.com/TheHackersNews/status/2121200667809436138",
-        "summary":  "SilentAir가 아시아 통신망의 SS7·Diameter 프로토콜을 악용해 SMS 인증코드와 통신정보를 가로챈 정황 공개."
     },
     {
         "date":  "2026-11-13",
@@ -151,12 +156,12 @@
     },
     {
         "date":  "2026-11-13",
-        "url":  "https://x.com/ESETresearch/status/2120805423485702438",
-        "summary":  "보안 탐지를 우회하는 Cruciferra 악성코드 관련 공격 시도 70만 건 이상이 차단됐다고 발표함."
+        "url":  "https://x.com/binance/status/2120921979226329504",
+        "summary":  "대규모 해킹으로 영향을 받은 고객 자산의 보전을 완료하고, 보유 자산 증명을 위한 새로운 Proof of Reserves를 발표함."
     },
     {
         "date":  "2026-11-13",
-        "url":  "https://x.com/binance/status/2120921979226329504",
-        "summary":  "대규모 해킹으로 영향을 받은 고객 자산의 보전을 완료하고, 보유 자산 증명을 위한 새로운 Proof of Reserves를 발표함."
+        "url":  "https://x.com/ESETresearch/status/2120805423485702438",
+        "summary":  "보안 탐지를 우회하는 Cruciferra 악성코드 관련 공격 시도 70만 건 이상이 차단됐다고 발표함."
     }
 ]
